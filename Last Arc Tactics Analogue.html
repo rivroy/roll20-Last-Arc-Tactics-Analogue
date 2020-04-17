@@ -66,42 +66,93 @@
                 Ability Scores
             </div>
         </div>
-        <!-- Strength -->
-        <div class="thermo">
-            <div class="big">
-                <input type="text" name='attr_strength' class='sheet-short' placeholder='0'>
-            </div>
-            <div class="thermo-tab-container">
-                <div class="thermo-tab">
-                    <div class="label">
-                        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{strength}]]}}'>
-                            <span>Strength </span>
-                        </button>
-                    </div>
-                    <div class="small">
-                        <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
+        <div style="margin: 0 10px">
+            <!-- Strength -->
+            <div class="sheet-thermo">
+                <div class="sheet-thermo-node-big">
+                    <input type="text" name='attr_strength' class='sheet-short' placeholder='0'>
+                </div>
+                <div class="sheet-thermo-background">
+                    <div class="sheet-thermo-label">
+                        <div>Strength</div>
                     </div>
                 </div>
-                <div class="thermo-tab-end">
+                <div class="sheet-thermo-node-medium">
+                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
                 </div>
             </div>
+            <!-- Vitality -->
+            <div class="sheet-thermo">
+                <div class="sheet-thermo-node-big">
+                    <input type="text" name='attr_vitality' class='sheet-short' placeholder='0'>
+                </div>
+                <div class="sheet-thermo-background">
+                    <div class="sheet-thermo-label">
+                        <div>Vitality</div>
+                    </div>
+                </div>
+                <div class="sheet-thermo-node-medium">
+                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
+                </div>
             </div>
-        <!-- Vitality -->
-
-
-        <div class="thermo">
-            <div class="thermo-section">
-                <input type="text" name='attr_strength' class='sheet-short' placeholder='0'>
+            <!-- Agility -->
+            <div class="sheet-thermo">
+                <div class="sheet-thermo-node-big">
+                    <input type="text" name='attr_agility' class='sheet-short' placeholder='0'>
+                </div>
+                <div class="sheet-thermo-background">
+                    <div class="sheet-thermo-label">
+                        <div>Agility</div>
+                    </div>
+                </div>
+                <div class="sheet-thermo-node-medium">
+                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
+                </div>
             </div>
-            <div class="thermo-section"></div>
-                <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{strength}]]}}'>
-                    <span>Strength </span>
-                </button>
-            <div class="thermo-section">
-                <span name='attr_strength_mod'>
+            <!-- Intelligence -->
+            <div class="sheet-thermo">
+                <div class="sheet-thermo-node-big">
+                    <input type="text" name='attr_intelligence' class='sheet-short' placeholder='0'>
+                </div>
+                <div class="sheet-thermo-background">
+                    <div class="sheet-thermo-label">
+                        <div>Intelligence</div>
+                    </div>
+                </div>
+                <div class="sheet-thermo-node-medium">
+                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
+                </div>
+            </div>
+            <!-- Wisdom -->
+            <div class="sheet-thermo">
+                <div class="sheet-thermo-node-big">
+                    <input type="text" name='attr_wisdom' class='sheet-short' placeholder='0'>
+                </div>
+                <div class="sheet-thermo-background">
+                    <div class="sheet-thermo-label">
+                        <div>Wisdom</div>
+                    </div>
+                </div>
+                <div class="sheet-thermo-node-medium">
+                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
+                </div>
+            </div>
+            <!-- Charisma -->
+            <div class="sheet-thermo">
+                <div class="sheet-thermo-node-big">
+                    <input type="text" name='attr_charisma' class='sheet-short' placeholder='0'>
+                </div>
+                <div class="sheet-thermo-background">
+                    <div class="sheet-thermo-label">
+                        <div>Strength</div>
+                    </div>
+                </div>
+                <div class="sheet-thermo-node-medium">
+                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
+                </div>
             </div>
         </div>
-		
+
         <br />
 		<label>Vitality </label><input type="text" name='attr_vitality' class='sheet-short' placeholder='0'>
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{vitality}]]}}'></button>
@@ -131,6 +182,64 @@
 	</div>
     <!-- middle col -->
 	<div class="col">
+        <!-- HP, Mana, Misc -->
+        <div class="sheet-section-misc-center">
+            <div class="sheet-flex-row">
+                <div class="sheet-stat-stack">
+                    <div class="sheet-label">
+                        Hero Points
+                    </div>
+                    <div class="sheet-icon sheet-icon-border-heropoints">
+                        <input type="text" name="attr_heropoints" />
+                    </div>
+                </div>
+                <div class="sheet-stat-stack">
+                    <div class="sheet-label">
+                        Damage Reduction
+                    </div>
+                    <div class="sheet-icon sheet-icon-border-damagereduction">
+                        <input type="text" name="attr_damagereduction" />
+                    </div>
+                </div>
+                <div class="sheet-stat-stack">
+                    <div class="sheet-label">
+                        Base Attack Bonus
+                    </div>
+                    <div class="sheet-icon sheet-icon-border-baseattackbonus">
+                        <input type="text" name="attr_baseatttackbonus" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- hp and mana-->
+        <div class="sheet-section-hp-mana">
+            <div class="sheet-flex-row">
+                <div class="sheet-flex-row sheet-stat-stack">
+                    <div class="sheet-icon sheet-icon-border-hitpoints">
+                        <input type="text" name="attr_hitpoints" />
+                    </div>
+                    <div class="sheet-group-right">
+                        <div class="sheet-label">
+                            Hit Points
+                        </div>
+                        <input type="text" name="attr_hitpointscurrent" />
+                    </div>
+                </div>
+                <div class="sheet-flex-row sheet-stat-stack">
+                    <div class="sheet-icon sheet-icon-border-mana">
+                        <input type="text" name="attr_mana" />
+                    </div>
+                    <div class="sheet-group-right">
+                        <div class="sheet-label">
+                            Mana
+                        </div>
+                        <input type="text" name="attr_manacurrent" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
 		<!-- Attacks -->
 		<div class="sheet-section-banner">
             <div class="sheet-section-banner-label">
@@ -182,6 +291,10 @@
                         <div><input type="text" name="attr_inventorybulk" /></div>
                     </div>
                 </fieldset>
+                <div class="sheet-flex-row sheet-inventory-total">
+                    <div>Total Inventory Bulk</div>
+                    <span>9</span>
+                </div>
             </div>
         </div>
 	</div>
@@ -205,10 +318,30 @@
                 Feats
             </div>
         </div>
+        <div class="sheet-section-border">
+            <div class="sheet-section-feats">
+                <fieldset class="repeating_feats">
+                    <div class="sheet-flex-row">
+                        <div><input type="text" name="attr_featsname" /></div>
+                        <div><input type="text" name="attr_featsdescription" /></div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
         <!-- Talents -->
         <div class="sheet-section-banner">
             <div class="sheet-section-banner-label">
                 Talents
+            </div>
+        </div>
+        <div class="sheet-section-border">
+            <div class="sheet-section-talents">
+                <fieldset class="repeating_talents">
+                    <div class="sheet-flex-row">
+                        <div><input type="text" name="attr_talentsname" /></div>
+                        <div><input type="text" name="attr_talentsdescription" /></div>
+                    </div>
+                </fieldset>
             </div>
         </div>
 

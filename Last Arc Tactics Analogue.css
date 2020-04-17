@@ -11,22 +11,58 @@
 .itemcontrol{
   z-index: 5;
 }
-
-
-h2 {
-	font-size: 2em;
-	margin-bottom: 10px;
-	text-align: center;
+/* replace add and modify with pictos icons*/
+.btn.repcontrol_add::after{
+    content: "&";
+    font-family: "Pictos";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+.btn.repcontrol_edit::after{
+    content: "l";
+    font-family: "Pictos";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+}
+.editmode ~ .repcontrol .btn.repcontrol_edit::after{
+    content: "*";
+}
+.btn.repcontrol_del::after{
+    content: "#";
+    font-family: "Pictos";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
 }
 
-label {
-	display: inline-block;
-	width: 31%;
+.charsheet .repcontrol_add,
+.charsheet .repcontrol_edit,
+.charsheet .repcontrol_move{
+    background:#b6d0ff;
+    border: 1px solid gray
 }
 
+.charsheet .repcontrol_add,
+.charsheet .repcontrol_edit,
+.charsheet .repcontrol_del{
+    font-size: 0;
+    padding: 2px 6px 2px 6px;
+    margin: 1px;
+    line-height: inherit;
+}
+
+.charsheet .repcontrol{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+}
+
+/* Make inputs fit parent containers*/
 input {
 	display: inline-block;
-	width: 100%;
+    width: 100%;
 }
 
 img {
@@ -43,6 +79,19 @@ textarea {
   display: flex;
   flex-direction: row;
 }
+
+.sheet-text-left{
+    text-align: left;
+}
+
+.sheet-text-center{
+    text-align: center;
+}
+
+.sheet-text-right{
+    text-align: right;
+}
+
 
 /* field underlines */
 .sheet-field-underline {
@@ -88,6 +137,116 @@ textarea {
 }
 
 /* end field underlines */
+
+/* sheet-section-misc-center */
+
+.sheet-section-misc-center .sheet-stat-stack{
+    width:100%;
+}
+
+.sheet-section-misc-center .sheet-stat-stack .sheet-label{
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sheet-section-misc-center .sheet-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: contain;
+    height: 90px;
+    background-repeat: no-repeat;
+}
+
+
+.sheet-section-misc-center .sheet-icon-border-heropoints{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/hero-points-background.png');
+}
+
+.sheet-section-misc-center .sheet-icon-border-damagereduction{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/damage-reduction-background.png');
+}
+
+.sheet-section-misc-center .sheet-icon-border-baseattackbonus{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/base-attack-bonus-background.png');
+}
+
+.sheet-section-misc-center .sheet-stat-stack input{
+    margin: 0 auto;
+    background: transparent;
+    border: solid 1px transparent;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sheet-section-misc-center .sheet-stat-stack input:hover{
+    border: solid 1px grey;
+}
+
+
+/* end sheet section misc center */
+
+/* sheet-section-hp-mana */
+
+.sheet-section-hp-mana .sheet-stat-stack{
+    width:100%;
+}
+
+.sheet-section-hp-mana .sheet-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 80px;
+    min-height: 80px;
+    z-index: 1;
+}
+
+.sheet-section-hp-mana .sheet-icon-border-hitpoints{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/hit-point-background.png');
+}
+
+.sheet-section-hp-mana .sheet-icon-border-mana{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/mana-background.png');
+}
+
+.sheet-section-hp-mana .sheet-icon input{
+    margin: 0 auto;
+    background: transparent;
+    border: solid 1px transparent;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sheet-section-hp-mana .sheet-group-right .sheet-label{
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-top:9px;
+}
+
+.sheet-section-hp-mana .sheet-group-right input{
+    border: solid 3px black;
+    border-left: 0;
+    margin-left: -18px;
+    padding-left: 14px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+/* end sheet-section-hp-mana */
 
 /* sheet-section-attacks */
 
@@ -166,23 +325,42 @@ textarea {
 }
 
 .sheet-section-inventory .sheet-inventory-header div:nth-child(2) {
-  width: 300%;
+    flex-grow: 1;
+}
+
+.sheet-section-inventory .sheet-inventory-header div:nth-child(1), 
+.sheet-section-inventory .sheet-inventory-header div:nth-child(3) {
+    width:30px;
+}
+
+.sheet-section-inventory .sheet-inventory-line.sheet-flex-row div:nth-child(2){
+    flex-grow: 1;
 }
 
 .sheet-section-inventory .sheet-inventory-line div {
   margin: 2px;
 }
 
-.sheet-section-inventory .sheet-inventory-line div:nth-child(2) {
-  width: 300%;
-}
+.sheet-section-inventory .sheet-inventory-line div:nth-child(1) input, 
+.sheet-section-inventory .sheet-inventory-line div:nth-child(3) input {
+    text-align: center;
+    font-weight: bold;
+    width:30px;
+}  
 
 .sheet-section-inventory input{
   background: #e8e8e8;
   border: solid 1px transparent;
-  margin: 2px;
+  padding: 1px;
+  margin:0;
+  font-size: 0.85em;
 }
 
+
+.sheet-section-inventory .sheet-flex-row.sheet-inventory-total{
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
 
 /* end section inventory*/
 
@@ -206,94 +384,120 @@ textarea {
 /* section border */
 
 .sheet-section-border{
-  border-width: 14px 14px 14px 14px;
+  border-width: 0 14px 14px 14px;
   border-style: solid;
   border-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/section-border.png') 24 24 24 24 round stretch;
-  margin: -6px 20px 0 20px;
+  margin: -4px 20px 0 20px;
 }
 
 /* end section border*/
 
 /* horizontal bars */
 .sheet-thermo{
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .sheet-thermo .sheet-thermo-background{
+    flex-grow: 1;
+    z-index: 3;
+    background: grey;
+    border-top: solid 3px black;
+    border-bottom: solid 3px black;
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-left: 14px;
+    margin-left: -14px;
+  }
+  
+  .sheet-thermo .sheet-thermo-node{
+    background: white;
+    margin: 0 2px;
+    border: solid 3px black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:24px;
+    height:24px;
+  }
+  
+  .sheet-thermo .sheet-thermo-label{
+    background: white;
+    flex-grow:1;
+    display: flex;
+    justify-content:center;
+    height: 24px;
+  }
+  
+  .sheet-thermo .sheet-thermo-label input,
+  .sheet-thermo .sheet-thermo-label span{
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0 0 0 4px;
+    margin:0;
+  }
+  
+  .sheet-thermo .sheet-thermo-node-big{
+    z-index:5;
+    background: white;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border: solid 3px black;
+    display: flex;
+    justify-content: center;
+  }
 
-.sheet-thermo .sheet-big{
-  z-index: 1;
-  padding: 2px;
-  border-radius: 50%;
-  border: 4px solid black;
-  background: white;
-}
+  .sheet-thermo .sheet-thermo-node-medium{
+    z-index:5;
+    background: white;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    border: solid 3px black;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sheet-thermo .sheet-thermo-node-medium:not(:first-child){
+    margin-left: -10px;
+  }
 
-.sheet-thermo .sheet-big input{
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-}
+  .sheet-thermo .sheet-thermo-node-end{
+    z-index: 1;
+    background: blue;
+    border-radius:0 50% 50% 0;
+    border: solid 3px black;
+    border-left: 0;
+    margin-left:-15px;
+    bottom: 100%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .sheet-thermo input{
+    background: transparent;
+    border: solid 1px transparent;
+  }
+  
+  .sheet-thermo .sheet-thermo-node input,
+  .sheet-thermo .sheet-thermo-node-big input{
+    width:100%;
+    font-weight: bold;
+    text-align: center;
+    padding:1px;
+  }
+  
+  .sheet-thermo .sheet-thermo-node-big input{
+    font-size: 1.6em;
+  }
 
-.sheet-thermo .sheet-small{
-  z-index:1;
-  border-radius: 50%;
-  border: 3px solid black;
-  background: white;
-}
-
-.sheet-thermo .sheet-small:not(:first-child){
-  margin-left: 6px;
-}
-
-.sheet-thermo .sheet-small input,span{
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  background: transparent;
-  border: none;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.sheet-thermo .sheet-label{
-  padding: 2px;
-  width: 80px;
-  background: white;
-  text-align: left;
-  vertical-align: middle;
-  border-radius: 8px;
-  border: solid 2px black;
-}
-
-.sheet-thermo .sheet-thermo-tab{
-  padding-left:16px;
-  background: grey;
-  display: flex;
-  border-top: solid 2px black;
-  border-bottom: solid 2px black;
-}
-
-.sheet-thermo .sheet-thermo-tab-container{
-  margin-left:-12px;
-  display:flex;
-}
-
-.sheet-thermo .sheet-thermo-tab-end{
-  margin-left:-16px;
-  width:32px;
-  background: grey;
-  border-top: solid 2px black;
-  border-right: solid 2px black;
-  border-bottom: solid 2px black;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-}
+  .sheet-thermo input:hover{
+    border: solid 1px black;
+  }
 /* end horizontal bars */
 
 
