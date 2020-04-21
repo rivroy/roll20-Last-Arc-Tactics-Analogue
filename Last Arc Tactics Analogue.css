@@ -2,7 +2,7 @@
 
 .charsheet {
 	background-color: rgb(255, 255, 255);
-  width: 1000px;
+    width: 950px;
 }
 
 /* Universal styling applied to all elements of these types */
@@ -73,6 +73,23 @@ textarea {
 	resize: vertical;
 }
 
+/* 4 column layout*/
+.sheet-layout-4col,
+.sheet-layout-3col{
+    display: flex;
+    clear: both;
+}
+
+.sheet-layout-4col .sheet-layout-col{
+    width: calc(25% - 15px); /* four column first */
+    margin-right: 14px;
+}
+
+.sheet-layout-3col .sheet-layout-col{
+    width: calc(33% - 15px); /* four column first */
+    margin-right: 14px;
+}
+
 /* Targetted styling that only effects elements with these classes */
 
 .sheet-flex-row{
@@ -90,6 +107,13 @@ textarea {
 
 .sheet-text-right{
     text-align: right;
+}
+
+.sheet-flex-col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -399,105 +423,67 @@ textarea {
     align-items: center;
   }
   
-  .sheet-thermo .sheet-thermo-background{
-    flex-grow: 1;
-    z-index: 3;
-    background: grey;
-    border-top: solid 3px black;
-    border-bottom: solid 3px black;
-    display:flex;
-    flex-direction: row;
-    align-items: stretch;
-    padding-left: 14px;
-    margin-left: -14px;
-  }
-  
-  .sheet-thermo .sheet-thermo-node{
-    background: white;
-    margin: 0 2px;
-    border: solid 3px black;
-    border-radius: 50%;
+.sheet-thermo .sheet-thermo-start{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/thermo-start-background.png');
+    background-size: cover;
+    width:32px;
+    height:32px;
     display: flex;
-    justify-content: center;
-    align-items:center;
-    width:24px;
-    height:24px;
-  }
-  
-  .sheet-thermo .sheet-thermo-label{
-    background: white;
-    flex-grow:1;
-    display: flex;
-    justify-content:center;
-    height: 24px;
-  }
-  
-  .sheet-thermo .sheet-thermo-label input,
-  .sheet-thermo .sheet-thermo-label span{
-    font-size: 0.9em;
-    font-weight: bold;
-    padding: 0 0 0 4px;
-    margin:0;
-  }
-  
-  .sheet-thermo .sheet-thermo-node-big{
-    z-index:5;
-    background: white;
-    width:40px;
-    height:40px;
-    border-radius: 50%;
-    border: solid 3px black;
-    display: flex;
-    justify-content: center;
-  }
+}
 
-  .sheet-thermo .sheet-thermo-node-medium{
-    z-index:5;
-    background: white;
-    width:30px;
-    height:30px;
-    border-radius: 50%;
-    border: solid 3px black;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .sheet-thermo .sheet-thermo-node-medium:not(:first-child){
-    margin-left: -10px;
-  }
-
-  .sheet-thermo .sheet-thermo-node-end{
-    z-index: 1;
-    background: blue;
-    border-radius:0 50% 50% 0;
-    border: solid 3px black;
-    border-left: 0;
-    margin-left:-15px;
-    bottom: 100%;
-    width: 30px;
-    height: 30px;
-  }
-  
-  .sheet-thermo input{
-    background: transparent;
-    border: solid 1px transparent;
-  }
-  
-  .sheet-thermo .sheet-thermo-node input,
-  .sheet-thermo .sheet-thermo-node-big input{
-    width:100%;
-    font-weight: bold;
+.sheet-thermo .sheet-thermo-start input{
     text-align: center;
-    padding:1px;
-  }
+    font-size: 1.2em;
+    font-weight: bold;
+}
   
-  .sheet-thermo .sheet-thermo-node-big input{
-    font-size: 1.6em;
-  }
+.sheet-thermo .sheet-thermo-label{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/thermo-label-background.png');
+    background-size: cover;
+    width:105px;
+    height:26px;
+    display: flex;
+    align-items: center;
+}
 
-  .sheet-thermo input:hover{
-    border: solid 1px black;
-  }
+.sheet-thermo .sheet-thermo-label div{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 7px;
+}
+
+.sheet-thermo .sheet-thermo-node{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/thermo-node-background.png');
+    background-size: cover;
+    width:26px;
+    height:26px;
+    display: flex;
+}
+
+.sheet-thermo .sheet-thermo-node input,
+.sheet-thermo .sheet-thermo-end input{
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+  
+
+.sheet-thermo .sheet-thermo-end{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/thermo-end-background.png');
+    background-size: cover;
+    width:26px;
+    height:26px;
+    display: flex;
+}
+
+.sheet-thermo input{
+    background-color: transparent;
+    border: solid 1px transparent;
+}
+
+.sheet-thermo input:hover{
+    border: solid 1px grey;
+}
 /* end horizontal bars */
 
 
