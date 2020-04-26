@@ -124,7 +124,7 @@
                     <div class="thermo">
                         <div class="thermo-start">
                             <input type="text" name="attr_acrobatics"
-                                value="@{halflevel}+@{agility}+@{acrobaticstrainedbonus}+@{acrobaticsfocusbonus}+@{acrobaticsbonus}"
+                                value="@{halflevel}+@{agility_mod}+@{acrobaticstrainedbonus}+@{acrobaticsfocusbonus}+@{acrobaticsbonus}"
                                 disabled="true">
                         </div>
                         <div class="thermo-label">
@@ -150,11 +150,11 @@
                     <div class="thermo">
                         <div class="thermo-start">
                             <input type="text" name="attr_alchemy"
-                                value="@{halflevel}+@{intelligence}+@{alchemytrainedbonus}+@{alchemyfocusbonus}+@{alchemybonus}"
+                                value="@{halflevel}+@{intelligence_mod}+@{alchemytrainedbonus}+@{alchemyfocusbonus}+@{alchemybonus}"
                                 disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>alchemy</div>
+                            <div>Alchemy</div>
                         </div>
                         <div class="thermo-node">
                             <input name="attr_halflevel" readonly="true"/>
@@ -172,460 +172,492 @@
                             <input type="text" name="attr_alchemybonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- appraise -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_appraise"
+                                value="@{halflevel}+@{intelligence_mod}+@{appraisetrainedbonus}+@{appraisefocusbonus}+@{appraisebonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>Appraise</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_intelligence_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_appraisetrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_appraisefocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_appraisebonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- athelitcs -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_athelitcs"
+                                value="@{halflevel}+@{strength_mod}+@{athelitcstrainedbonus}+@{athelitcsfocusbonus}+@{athelitcsbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>athelitcs</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_strength_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_athelitcstrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_athelitcsfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_athelitcsbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- deception -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_deception"
+                                value="@{halflevel}+@{charisma_mod}+@{deceptiontrainedbonus}+@{deceptionfocusbonus}+@{deceptionbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>deception</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_charisma_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_deceptiontrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_deceptionfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_deceptionbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- disabledevice -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_disabledevice"
+                                value="@{halflevel}+@{agility_mod}+@{disabledevicetrainedbonus}+@{disabledevicefocusbonus}+@{disabledevicebonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>disabledevice</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_agility_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_disabledevicetrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_disabledevicefocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_disabledevicebonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- drive -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_drive"
+                                value="@{halflevel}+@{wisdom_mod}+@{drivetrainedbonus}+@{drivefocusbonus}+@{drivebonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>drive</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_wisdom_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_drivetrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_drivefocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_drivebonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- animalhandling -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_animalhandling"
+                                value="@{halflevel}+@{wisdom_mod}+@{animalhandlingtrainedbonus}+@{animalhandlingfocusbonus}+@{animalhandlingbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>animalhandling</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_wisdom_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_animalhandlingtrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_animalhandlingfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_animalhandlingbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- knowledge1 -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge1"
+                                value="@{halflevel}+@{intelligence_mod}+@{knowledge1trainedbonus}+@{knowledge1focusbonus}+@{knowledge1bonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <input name="attr_knowledge1name" placeholder="Knowledge"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_intelligence_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge1trainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge1focusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge1bonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- knowledge2 -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge2"
+                                value="@{halflevel}+@{intelligence_mod}+@{knowledge2trainedbonus}+@{knowledge2focusbonus}+@{knowledge2bonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>knowledge2</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_intelligence_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge2trainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge2focusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge2bonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- knowledge3 -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge3"
+                                value="@{halflevel}+@{intelligence_mod}+@{knowledge3trainedbonus}+@{knowledge3focusbonus}+@{knowledge3bonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>knowledge3</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_intelligence_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge3trainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge3focusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge3bonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- knowledge4 -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge4"
+                                value="@{halflevel}+@{intelligence_mod}+@{knowledge4trainedbonus}+@{knowledge4focusbonus}+@{knowledge4bonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>knowledge4</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_intelligence_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge4trainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge4focusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_knowledge4bonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- medicine -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_medicine"
+                                value="@{halflevel}+@{wisdom_mod}+@{medicinetrainedbonus}+@{medicinefocusbonus}+@{medicinebonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>medicine</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_wisdom_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_medicinetrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_medicinefocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_medicinebonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- perception -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_perception"
+                                value="@{halflevel}+@{wisdom_mod}+@{perceptiontrainedbonus}+@{perceptionfocusbonus}+@{perceptionbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>perception</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_wisdom_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_perceptiontrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_perceptionfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_perceptionbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- performance -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_performance"
+                                value="@{halflevel}+@{charisma_mod}+@{performancetrainedbonus}+@{performancefocusbonus}+@{performancebonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>performance</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_charisma_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_performancetrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_performancefocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_performancebonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- persuasion -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_persuasion"
+                                value="@{halflevel}+@{charisma_mod}+@{persuasiontrainedbonus}+@{persuasionfocusbonus}+@{persuasionbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>persuasion</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_charisma_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_persuasiontrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_persuasionfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_persuasionbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- smithing -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_smithing"
+                                value="@{halflevel}+@{intelligence_mod}+@{smithingtrainedbonus}+@{smithingfocusbonus}+@{smithingbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>smithing</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_intelligence_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_smithingtrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_smithingfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_smithingbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- spellcraft -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_spellcraft"
+                                value="@{halflevel}+@{wisdom_mod}+@{spellcrafttrainedbonus}+@{spellcraftfocusbonus}+@{spellcraftbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>spellcraft</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_wisdom_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_spellcrafttrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_spellcraftfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_spellcraftbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- stealth -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_stealth"
+                                value="@{halflevel}+@{agility_mod}+@{stealthtrainedbonus}+@{stealthfocusbonus}+@{stealthbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>stealth</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_agility_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_stealthtrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_stealthfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_stealthbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- survival -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_survival"
+                                value="@{halflevel}+@{wisdom_mod}+@{survivaltrainedbonus}+@{survivalfocusbonus}+@{survivalbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>survival</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_halflevel" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_wisdom_mod" readonly="true"/>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_survivaltrainedbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_survivalfocusbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_survivalbonus" value="0">
                         </div>
                     </div>
-                    <!-- Acrobatics -->
+                    <!-- passiveperception -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_passiveperception"
+                                value="@{passiveperceptionbasebonus}+@{passiveperceptionbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Acrobatics</div>
+                            <div>Passive Perception</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input name="attr_perception" readonly="true">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
-                        </div>
-                        <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
-                        </div>
-                        <div class="thermo-node">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_passiveperceptionbasebonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_acrobatics" placeholder="0">
+                            <input type="text" name="attr_passiveperceptionbonus" value="0">
                         </div>
                     </div>
                 </div>
@@ -914,73 +946,79 @@
                     <!-- Fortitude -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_fortitude" placeholder="0">
+                            <input type="text" name="attr_fortitude"
+                                value="10+@{characterlevel}+@{vitality_mod}+@{fortitudeclassbonus}+@{fortitudefeatbonus}+@{fortitudebonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
                             <div>Fortitude</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_fortitude" placeholder="0">
+                            <input type="text" name="attr_characterlevel" readonly="true">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_fortitude" placeholder="0">
+                            <input type="text" name="attr_vitality_mod" readonly="true">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_fortitude" placeholder="0">
+                            <input type="text" name="attr_fortitudeclassbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_fortitude" placeholder="0">
+                            <input type="text" name="attr_fortitudefeatbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_fortitude" placeholder="0">
+                            <input type="text" name="attr_fortitudebonus" value="0">
                         </div>
                     </div>
                     <!-- Reflexes -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_reflexes" placeholder="0">
+                            <input type="text" name="attr_reflexes"
+                                value="10+@{characterlevel}+@{agility_mod}+@{reflexesclassbonus}+@{reflexesfeatbonus}+@{reflexesbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
                             <div>Reflexes</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_reflexes" placeholder="0">
+                            <input type="text" name="attr_characterlevel" readonly="true">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_reflexes" placeholder="0">
+                            <input type="text" name="attr_agility_mod" readonly="true">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_reflexes" placeholder="0">
+                            <input type="text" name="attr_reflexesclassbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_reflexes" placeholder="0">
+                            <input type="text" name="attr_reflexesfeatbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_reflexes" placeholder="0">
+                            <input type="text" name="attr_reflexesbonus" value="0">
                         </div>
                     </div>
                     <!-- Willpower -->
                     <div class="thermo">
                         <div class="thermo-start">
-                            <input type="text" name="attr_willpower" placeholder="0">
+                            <input type="text" name="attr_willpower"
+                                value="10+@{characterlevel}+@{wisdom_mod}+@{willpowerclassbonus}+@{willpowerfeatbonus}+@{willpowerbonus}"
+                                disabled="true">
                         </div>
                         <div class="thermo-label">
                             <div>Willpower</div>
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_willpower" placeholder="0">
+                            <input type="text" name="attr_characterlevel" readonly="true">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_willpower" placeholder="0">
+                            <input type="text" name="attr_wisdom_mod" readonly="true">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_willpower" placeholder="0">
+                            <input type="text" name="attr_willpowerclassbonus" value="0">
                         </div>
                         <div class="thermo-node">
-                            <input type="text" name="attr_willpower" placeholder="0">
+                            <input type="text" name="attr_willpowerfeatbonus" value="0">
                         </div>
                         <div class="thermo-end">
-                            <input type="text" name="attr_willpower" placeholder="0">
+                            <input type="text" name="attr_willpowerbonus" value="0">
                         </div>
                     </div>
                 </div>
