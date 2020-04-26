@@ -7,6 +7,10 @@
 
 /* Universal styling applied to all elements of these types */
 
+textarea{
+    box-sizing: border-box;
+}
+
 /* place item controls infront of relative elements */
 .itemcontrol{
   z-index: 5;
@@ -73,6 +77,15 @@ textarea {
 	resize: vertical;
 }
 
+/* common styles */
+.sheet-tinytext{
+    font-size: 8px;
+}
+
+.sheet-border{
+    border: solid black 2px;
+}
+
 /* 4 column layout*/
 .sheet-layout-4col,
 .sheet-layout-3col{
@@ -89,6 +102,15 @@ textarea {
     width: calc(33% - 15px); /* four column first */
     margin-right: 14px;
 }
+
+/* top logo */
+.sheet-image-game-logo{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/game-logo.png');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* Targetted styling that only effects elements with these classes */
 
@@ -212,7 +234,6 @@ textarea {
 .sheet-section-misc-center .sheet-stat-stack input:hover{
     border: solid 1px grey;
 }
-
 
 /* end sheet section misc center */
 
@@ -372,7 +393,7 @@ textarea {
     width:30px;
 }  
 
-.sheet-section-inventory input{
+.sheet-section-inventory .repcontainer input{
   background: #e8e8e8;
   border: solid 1px transparent;
   padding: 1px;
@@ -384,7 +405,22 @@ textarea {
 .sheet-section-inventory .sheet-flex-row.sheet-inventory-total{
     border-top: solid 2px black;
     border-bottom: solid 2px black;
+    justify-content: space-between;
+    padding: 0 4px;
+    font-weight: bold;
 }
+
+.sheet-section-inventory .inventory-maximumbulk{
+
+}
+
+.sheet-section-inventory input.sheet-inventory-maxbulkinput{
+    border: 2px black solid;
+    width: 35px;
+    padding: 1px;
+    margin: 0;
+}
+
 
 /* end section inventory*/
 
@@ -416,12 +452,24 @@ textarea {
 
 /* end section border*/
 
-/* horizontal bars */
+/* thermo bars */
 .sheet-thermo{
     display: flex;
     flex-direction: row;
     align-items: center;
   }
+
+  
+.sheet-thermo-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sheet-thermo-header .sheet-tinytext{
+    width: 26px;
+    text-align: center;
+}
   
 .sheet-thermo .sheet-thermo-start{
     background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/thermo-start-background.png');
@@ -429,9 +477,12 @@ textarea {
     width:32px;
     height:32px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.sheet-thermo .sheet-thermo-start input{
+.sheet-thermo .sheet-thermo-start input,
+.sheet-thermo .sheet-thermo-start span{
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
@@ -446,7 +497,8 @@ textarea {
     align-items: center;
 }
 
-.sheet-thermo .sheet-thermo-label div{
+.sheet-thermo .sheet-thermo-label div,
+.sheet-thermo .sheet-thermo-label input{
     font-size: 1.1em;
     font-weight: bold;
     margin: 7px;
@@ -458,15 +510,9 @@ textarea {
     width:26px;
     height:26px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.sheet-thermo .sheet-thermo-node input,
-.sheet-thermo .sheet-thermo-end input{
-    text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-}
-  
 
 .sheet-thermo .sheet-thermo-end{
     background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/thermo-end-background.png');
@@ -474,6 +520,17 @@ textarea {
     width:26px;
     height:26px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-thermo .sheet-thermo-node input,
+.sheet-thermo .sheet-thermo-end input,
+.sheet-thermo .sheet-thermo-node span,
+.sheet-thermo .sheet-thermo-end span{
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .sheet-thermo input{
@@ -486,39 +543,65 @@ textarea {
 }
 /* end horizontal bars */
 
+/* feats */
 
-
-
-
-/* input.sheet-short {
-	width: 17%;
+.sheet-feat-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
 }
 
-select.sheet-dtype {
-    vertical-align: top;
-    width: 60px;
-}
-span.sheet-dee {
-	font-size: 1.4em;
-	font-weight: bold;
-	left: -36%;
-	padding-right: 4px;
-	position: relative;
-	top: 3px;
+/* end feats */
+
+/* talents */
+
+.sheet-talents-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
 }
 
-/* Targetted styling that only effects elements contained within the stated class */
-/* .sheet-stats h3 {
-	display: inline-block;
-	text-align: left;
+/* end talents */
+
+/* start hide toggle*/
+
+input.sheet-toggle-show{
+
+} 
+
+.sheet-toggle-container{
+    position: relative;
+    margin-bottom: 4px;
 }
 
-.sheet-stats h3:first-child {
-	margin-left: 35%;
-	margin-right: 15%;
+.sheet-toggle-container .sheet-toggle-hide{
+    position: absolute;
+    right: 0;
+    width: auto;
 }
 
-.sheet-stats input {
-	margin-right: 8%;
-	width: 17%;
-}  */
+
+input.sheet-toggle-show:not(:checked) ~ div.sheet-toggle-body,
+input.sheet-toggle-hide:checked ~ div.sheet-toggle-body {
+    display: none;
+}
+
+/* end hide toggle*/
+
+/* character pages */
+
+/*Configure the tab buttons*/
+.sheet-page-character,
+.sheet-page-spells,
+.sheet-page-journal {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="pagecharacter"] ~ div.sheet-page-character,
+.sheet-tabstoggle[value="pagespells"] ~ div.sheet-page-spells,
+.sheet-tabstoggle[value="pagejournal"] ~ div.sheet-page-journal {
+	display: block;
+}
+
+/* end character pages */

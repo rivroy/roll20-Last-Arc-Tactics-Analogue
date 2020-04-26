@@ -1,963 +1,1154 @@
-<div class="layout-4col">
-    <!-- top charcter info -->
-    <div class="layout-col">
-        <div class="image-game-logo"></div>
-    </div>
-    <!-- middle left col -->
-    <div class="layout-col">
-        <div class="flex-row field-underline">
-            <div class="input-wrap">
-                <label class="label">Name</label>
-                <input type="text" name="attr_character_name" />
-            </div>
-        </div>
-        <div class="flex-row field-underline">
-            <div class="input-wrap">
-                <label class="label">Race</label>
-                <input type="text" name="attr_race" />
-            </div>
-            <div class="input-wrap">
-                <label class="label">Gender</label>
-                <input type="text" name="attr_gender" />
-            </div>
-        </div>
-    </div>
-     <!-- middle right col -->
-    <div class="layout-col">
-        <div class="flex-row field-underline">
-            <div class="input-wrap">
-                <label class="label">Class</label>
-                <input type="text" name="attr_class" />
-            </div>
-            <div class="input-wrap">
-                <label class="label">Adv. Class</label>
-                <input type="text" name="attr_advancedclass" />
-            </div>
-        </div>
-        <div class="flex-row field-underline">
-            <div class="input-wrap">
-                <label class="label">Multiclass</label>
-                <input type="text" name="attr_multiclass" />
-            </div>
-            <div class="input-wrap">
-                <label class="label">Alignment</label>
-                <input type="text" name="attr_alignment" />
-            </div>
-        </div>
-	</div>
-    <!-- right col -->
-    <div class="layout-col">
-        <div class="flex-row field-underline">
-            <div class="input-wrap">
-                <label class="label">Experience</label>
-                <input type="text" name="attr_experience" />
-            </div>
-            <div class="input-wrap">
-                <label class="label">Next Level</label>
-                <input type="text" name="attr_nextlevel" />
-            </div>
-        </div>
-	</div>
+<div>
+    <button type="action" name="act_pagecharacter">Character</button>
+    <button type="action" name="act_pagespells">Spells</button>
+    <button type="action" name="act_pagejournal">Journal</button>
 </div>
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='pagecharacter' />
 
-<!-- Lower section -->
-<div class="layout-3col">
-    <div class="layout-col">
-        <!-- Skills -->
-        <div class="section-banner">
-            <div class="section-banner-label">
-                Skills
+<div class='sheet-page-character'>
+
+    <div class="layout-4col">
+        <!-- top charcter info -->
+        <div class="layout-col">
+            <div class="image-game-logo"></div>
+        </div>
+        <!-- middle left col -->
+        <div class="layout-col">
+            <div class="flex-row field-underline">
+                <div class="input-wrap">
+                    <label class="label">Name</label>
+                    <input type="text" name="attr_character_name" />
+                </div>
+            </div>
+            <div class="flex-row field-underline">
+                <div class="input-wrap">
+                    <label class="label">Race</label>
+                    <input type="text" name="attr_race" />
+                </div>
+                <div class="input-wrap">
+                    <label class="label">Gender</label>
+                    <input type="text" name="attr_gender" />
+                </div>
             </div>
         </div>
-
-
-
-
-        <!-- Skills and what they are based off -->
-        <!--Acrobatics - Agility
-        Alchmey - Intelligence
-        Appraise - Intelligence
-        Athelitcs - Strength
-        Deception - Charisma
-        Disable Device - Agility
-        Drive - Wisdom
-        Animal Handling - Wisdom
-        Knowledge - Intelligence
-        Knowledge - Intelligence
-        Knowledge - Intelligence
-        Knowledge - intelligence
-        Medicine - Wisdom
-        Perception - Wisdom
-        Performance - Charisma
-        Persuaison - Charisma
-        Smithing - Intelligence
-        Spellcraft - Wisdom
-        Stealth - Agility
-        Survival - Wisdom
-        Passive Perception - 10+ Peception Skills
-        -expandable list for notes-->
-
-
-
-        <div class="flex-col-center">
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
+        <!-- middle right col -->
+        <div class="layout-col">
+            <div class="flex-row field-underline">
+                <div class="input-wrap">
+                    <label class="label">Class</label>
+                    <input type="text" name="attr_class" />
                 </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
+                <div class="input-wrap">
+                    <label class="label">Adv. Class</label>
+                    <input type="text" name="attr_advancedclass" />
                 </div>
             </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
+            <div class="flex-row field-underline">
+                <div class="input-wrap">
+                    <label class="label">Multiclass</label>
+                    <input type="text" name="attr_multiclass" />
                 </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
+                <div class="input-wrap">
+                    <label class="label">Alignment</label>
+                    <input type="text" name="attr_alignment" />
                 </div>
             </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-            </div>
-            <!-- Acrobatics -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Acrobatics</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_acrobatics' placeholder='0'>
+        </div>
+        <!-- right col -->
+        <div class="layout-col">
+            <div class="flex-row field-underline">
+                <div class="input-wrap">
+                    <label class="label">Experience</label>
+                    <input type="text" name="attr_experience" />
+                </div>
+                <div class="input-wrap">
+                    <label class="label">Level</label>
+                    <input type="text" name="attr_characterlevel" />
                 </div>
             </div>
         </div>
     </div>
-    <!-- left col -->
-	<div class="layout-col">
-        <!-- HP, Mana, Misc -->
-        <div class="section-misc-center">
-            <div class="flex-row">
-                <div class="stat-stack">
-                    <div class="label">
-                        Hero Points
-                    </div>
-                    <div class="icon icon-border-heropoints">
-                        <input type="text" name="attr_heropoints" />
-                    </div>
+
+    <!-- Lower section -->
+    <div class="layout-3col">
+        <div class="layout-col">
+            <!-- Skills -->
+            <div class="section-banner">
+                <div class="section-banner-label">
+                    Skills
                 </div>
-                <div class="stat-stack">
-                    <div class="label">
-                        Damage Reduction
+            </div>
+
+
+
+
+            <!-- Skills and what they are based off -->
+            <!--Acrobatics - Agility
+            Alchemy - Intelligence
+            Appraise - Intelligence
+            Athelitcs - Strength
+            Deception - Charisma
+            Disable Device - Agility
+            Drive - Wisdom
+            Animal Handling - Wisdom
+            Knowledge - Intelligence
+            Knowledge - Intelligence
+            Knowledge - Intelligence
+            Knowledge - intelligence
+            Medicine - Wisdom
+            Perception - Wisdom
+            Performance - Charisma
+            Persuaison - Charisma
+            Smithing - Intelligence
+            Spellcraft - Wisdom
+            Stealth - Agility
+            Survival - Wisdom
+            Passive Perception - 10+ Peception Skills
+            -expandable list for notes-->
+
+            <div class="flex-col-center section-skills">
+                <div class="flex-col-center">
+                    <div class="thermo-header">
+                        <div>
+                            <div class="tinytext">Score</div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="tinytext">1/2 Lvl</div>
+                            <div class="tinytext">Ability</div>
+                            <div class="tinytext">Trained</div>
+                            <div class="tinytext">Focus</div>
+                            <div class="tinytext">Bonus</div>
+                        </div>
                     </div>
-                    <div class="icon icon-border-damagereduction">
-                        <input type="text" name="attr_damagereduction" />
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics"
+                                value="@{halflevel}+@{agility}+@{acrobaticstrainedbonus}+@{acrobaticsfocusbonus}+@{acrobaticsbonus}"
+                                disabled="true">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input name="attr_halflevel" readonly="true"/>
+                        </div>
+                        <div class="thermo-node">
+                            <input name="attr_agility_mod" readonly="true">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobaticstrainedbonus" value="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobaticsfocusbonus" value="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobaticsbonus" value="0">
+                        </div>
                     </div>
-                </div>
-                <div class="stat-stack">
-                    <div class="label">
-                        Base Attack Bonus
+                    <!-- alchemy -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_alchemy"
+                                value="@{halflevel}+@{intelligence}+@{alchemytrainedbonus}+@{alchemyfocusbonus}+@{alchemybonus}"
+                                disabled="true">
+                        </div>
+                        <div class="thermo-label">
+                            <div>alchemy</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input name="attr_halflevel" readonly="true"/>
+                        </div>
+                        <div class="thermo-node">
+                            <input name="attr_intelligence_mod" readonly="true"/>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_alchemytrainedbonus" value="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_alchemyfocusbonus" value="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_alchemybonus" value="0">
+                        </div>
                     </div>
-                    <div class="icon icon-border-baseattackbonus">
-                        <input type="text" name="attr_baseatttackbonus" />
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Acrobatics -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Acrobatics</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_acrobatics" placeholder="0">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- hp and mana-->
-        <div class="section-hp-mana">
-            <div class="flex-row">
-                <div class="flex-row stat-stack">
-                    <div class="icon icon-border-hitpoints">
-                        <input type="text" name="attr_hitpoints" />
-                    </div>
-                    <div class="group-right">
+        <!-- left col -->
+        <div class="layout-col">
+            <!-- HP, Mana, Misc -->
+            <div class="section-misc-center">
+                <div class="flex-row">
+                    <div class="stat-stack">
                         <div class="label">
-                            Hit Points
+                            Hero Points
                         </div>
-                        <input type="text" name="attr_hitpointscurrent" />
+                        <div class="icon icon-border-heropoints">
+                            <input type="text" name="attr_heropoints" />
+                        </div>
                     </div>
-                </div>
-                <div class="flex-row stat-stack">
-                    <div class="icon icon-border-mana">
-                        <input type="text" name="attr_mana" />
-                    </div>
-                    <div class="group-right">
+                    <div class="stat-stack">
                         <div class="label">
-                            Mana
+                            Damage Reduction
                         </div>
-                        <input type="text" name="attr_manacurrent" />
+                        <div class="icon icon-border-damagereduction">
+                            <input type="text" name="attr_damagereduction" />
+                        </div>
+                    </div>
+                    <div class="stat-stack">
+                        <div class="label">
+                            Base Attack Bonus
+                        </div>
+                        <div class="icon icon-border-baseattackbonus">
+                            <input type="text" name="attr_baseatttackbonus" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-		<!-- Attacks -->
-		<div class="section-banner">
-            <div class="section-banner-label">
-                Attacks
-            </div>
-        </div>
-        <div class="flex-col-center">
-            <div>
-                <!-- attacks repeating with add modify buttons -->
-                <fieldset class="repeating_attacks">
-                    <div class="section-attacks">
-                        <div class="input-wrap grid-one">
-                            <label class="label">Weapon</label>
-                            <input type="text" name="attr_attackname" />
+            <!-- hp and mana-->
+            <div class="section-hp-mana">
+                <div class="flex-row">
+                    <div class="flex-row stat-stack">
+                        <div class="icon icon-border-hitpoints">
+                            <input type="text" name="attr_hitpoints" />
                         </div>
-                        <div class="input-wrap grid-two">
-                            <label class="label">Type</label>
-                            <input type="text" name="attr_attacktype" />
-                        </div>
-                        <div class="input-wrap grid-three">
-                            <label class="label">Range</label>
-                            <input type="text" name="attr_attackrange" />
-                        </div>
-                        <div class="input-wrap grid-four">
-                            <label class="label">Attack Bonus</label>
-                            <input type="text" name="attr_attackbonus" />
-                        </div>
-                        <div class="input-wrap grid-five">
-                            <label class="label">Damage</label>
-                            <input type="text" name="attr_attackdamage" />
+                        <div class="group-right">
+                            <div class="label">
+                                Hit Points
+                            </div>
+                            <input type="text" name="attr_hitpointscurrent" />
                         </div>
                     </div>
-                </fieldset>
-            </div>
-        </div>
-        <!-- Inventory -->
-		<div class="section-banner">
-            <div class="section-banner-label">
-                Inventory
-            </div>
-        </div>
-        <div class="section-border">
-            <div class="section-inventory">
-                <div class="flex-row inventory-header">
-                    <div class="label inventory-quantity">#</div>
-                    <div class="label inventory-name">Item Name</div>
-                    <div class="label inventory-bulk">Bulk</div>
-                </div>
-                <fieldset class="repeating_inventory">
-                    <div class="flex-row inventory-line">
-                        <div><input type="text" name="attr_inventoryquantity" /></div>
-                        <div><input type="text" name="attr_inventoryname" /></div>
-                        <div><input type="text" name="attr_inventorybulk" /></div>
+                    <div class="flex-row stat-stack">
+                        <div class="icon icon-border-mana">
+                            <input type="text" name="attr_mana" />
+                        </div>
+                        <div class="group-right">
+                            <div class="label">
+                                Mana
+                            </div>
+                            <input type="text" name="attr_manacurrent" />
+                        </div>
                     </div>
-                </fieldset>
-                <div class="flex-row inventory-total">
-                    <div>Total Inventory Bulk</div>
-                    <span>9</span>
                 </div>
             </div>
-        </div>
 
-        <div class="section-banner">
-            <div class="section-banner-label">
-                Ability Scores
-            </div>
-        </div>
-        <div class="flex-col-center">
-            <!-- Strength -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_strength' class='short' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Strength</div>
-                </div>
-                <div class="thermo-end">
-                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
-                </div>
-            </div>
-            <!-- Vitality -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_vitality' class='short' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Vitality</div>
-                </div>
-                <div class="thermo-end">
-                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
-                </div>
-            </div>
-            <!-- Agility -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_agility' class='short' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Agility</div>
-                </div>
-                <div class="thermo-end">
-                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
+            <div class="flex-col-center">
+                <div class="flex-col-center">
+                    <div class="thermo-header">
+                        <div>
+                            <div class="tinytext">Score</div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="tinytext">1/2 Lvl</div>
+                            <div class="tinytext">Agility</div>
+                            <div class="tinytext">Feats</div>
+                            <div class="tinytext">Bonus</div>
+                        </div>
+                    </div>
+                    <!-- Initiative -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_initiative"
+                                value="(@{halflevel}+@{agility}+@{initiativefeatbonus}+@{initiativebonus})"
+                                disabled="true">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Initiative</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input name="attr_halflevel" readonly="true"/>
+                        </div>
+                        <div class="thermo-node">
+                            <input name="attr_agility_mod" readonly="true"/>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_initiativefeatbonus" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_initiativebonus" placeholder="0">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Intelligence -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_intelligence' class='short' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Intelligence</div>
-                </div>
-                <div class="thermo-end">
-                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
-                </div>
-            </div>
-            <!-- Wisdom -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_wisdom' class='short' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Wisdom</div>
-                </div>
-                <div class="thermo-end">
-                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
-                </div>
-            </div>
-            <!-- Charisma -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_charisma' class='short' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Strength</div>
-                </div>
-                <div class="thermo-end">
-                    <span name="attr_strength_mod" value="(@{strength} + 5)" disabled></span>
-                </div>
-            </div>
-        </div>
 
-	</div>
-    <!-- right middle col -->
-	<div class="layout-col">
-        <!-- Defences -->
-		<div class="section-banner">
-            <div class="section-banner-label">
-                Defences
-            </div>
-        </div>
-        <div class="flex-col-center">
-            <!-- Fortitude -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_fortitude' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Fortitude</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_fortitude' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_fortitude'placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_fortitude'  placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_fortitude' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_fortitude' placeholder='0'>
+            <!-- Attacks -->
+            <div class="section-banner">
+                <div class="section-banner-label">
+                    Attacks
                 </div>
             </div>
-            <!-- Reflexes -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_reflexes' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Reflexes</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_reflexes' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_reflexes'placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_reflexes'  placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_reflexes' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_reflexes' placeholder='0'>
-                </div>
-            </div>
-            <!-- Willpower -->
-            <div class="thermo">
-                <div class="thermo-start">
-                    <input type="text" name='attr_willpower' placeholder='0'>
-                </div>
-                <div class="thermo-label">
-                    <div>Willpower</div>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_willpower' placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_willpower'placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_willpower'  placeholder='0'>
-                </div>
-                <div class="thermo-node">
-                    <input type="text" name='attr_willpower' placeholder='0'>
-                </div>
-                <div class="thermo-end">
-                    <input type="text" name='attr_willpower' placeholder='0'>
+            <div class="flex-col-center">
+                <div>
+                    <!-- attacks repeating with add modify buttons -->
+                    <fieldset class="repeating_attacks">
+                        <div class="section-attacks">
+                            <div class="input-wrap grid-one">
+                                <label class="label">Weapon</label>
+                                <input type="text" name="attr_attackname" />
+                            </div>
+                            <div class="input-wrap grid-two">
+                                <label class="label">Type</label>
+                                <input type="text" name="attr_attacktype" />
+                            </div>
+                            <div class="input-wrap grid-three">
+                                <label class="label">Range</label>
+                                <input type="text" name="attr_attackrange" />
+                            </div>
+                            <div class="input-wrap grid-four">
+                                <label class="label">Attack Bonus</label>
+                                <input type="text" name="attr_attackbonus" />
+                            </div>
+                            <div class="input-wrap grid-five">
+                                <label class="label">Damage</label>
+                                <input type="text" name="attr_attackdamage" />
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
-        </div>
-        <!-- Condition -->
-        <div class="section-banner">
-            <div class="section-banner-label">
-                Condition
+            <!-- Inventory -->
+            <div class="section-banner">
+                <div class="section-banner-label">
+                    Inventory
+                </div>
             </div>
-        </div>
-        <!-- Feats -->
-        <div class="section-banner">
-            <div class="section-banner-label">
-                Feats
-            </div>
-        </div>
-        <div class="section-border">
-            <div class="section-feats">
-                <fieldset class="repeating_feats">
-                    <div class="flex-row">
-                        <div><input type="text" name="attr_featsname" /></div>
-                        <div><input type="text" name="attr_featsdescription" /></div>
+            <div class="section-border">
+                <div class="section-inventory">
+                    <div class="flex-row inventory-header">
+                        <div class="label inventory-quantity">#</div>
+                        <div class="label inventory-name">Item Name</div>
+                        <div class="label inventory-bulk">Bulk</div>
                     </div>
-                </fieldset>
-            </div>
-        </div>
-        <!-- Talents -->
-        <div class="section-banner">
-            <div class="section-banner-label">
-                Talents
-            </div>
-        </div>
-        <div class="section-border">
-            <div class="section-talents">
-                <fieldset class="repeating_talents">
-                    <div class="flex-row">
-                        <div><input type="text" name="attr_talentsname" /></div>
-                        <div><input type="text" name="attr_talentsdescription" /></div>
+                    <fieldset class="repeating_inventory">
+                        <div class="flex-row inventory-line">
+                            <div><input type="text" name="attr_itemquantity" /></div>
+                            <div><input type="text" name="attr_itemname" /></div>
+                            <div><input type="text" name="attr_itembulk" /></div>
+                        </div>
+                    </fieldset>
+                    <div class="flex-row inventory-total">
+                        <div>Total Bulk</div>
+                        <span type="text" name="attr_bulktotal" value="0">
                     </div>
-                </fieldset>
+                    <div class="flex-row inventory-maximumbulk">
+                        <div>Maximum Bulk</div>
+                        <div class="flex-col">
+                            <span class="tinytext">Strength</span>
+                            <span class="border inventory-maxbulkinput" type="text" name="attr_strength" disabled>
+                        </div>
+                        <div class="flex-col">
+                            <span class="tinytext">Bonus</span>
+                            <input class="border inventory-maxbulkinput" type="text" name="attr_maximumbulkbonus"
+                                value="0">
+                        </div>
+                        <div>
+                            <input class="border inventory-maxbulkinput" type="text" name="attr_maximumbulk"
+                                value="@{strength} + @{maximumbulkbonus}" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-banner">
+                <div class="section-banner-label">
+                    Ability Scores
+                </div>
+            </div>
+            <div class="flex-col-center">
+                <!-- Strength -->
+                <div class="thermo">
+                    <div class="thermo-start">
+                        <input type="text" name="attr_strength" value="0">
+                    </div>
+                    <div class="thermo-label">
+                        <div>Strength</div>
+                    </div>
+                    <div class="thermo-end">
+                        <input name="attr_strength_mod" readonly="true"/>
+                    </div>
+                </div>
+                <!-- Vitality -->
+                <div class="thermo">
+                    <div class="thermo-start">
+                        <input type="text" name="attr_vitality" value="0">
+                    </div>
+                    <div class="thermo-label">
+                        <div>Vitality</div>
+                    </div>
+                    <div class="thermo-end">
+                        <input name="attr_vitality_mod" readonly="true"/>
+                    </div>
+                </div>
+                <!-- Agility -->
+                <div class="thermo">
+                    <div class="thermo-start">
+                        <input type="text" name="attr_agility" value="0">
+                    </div>
+                    <div class="thermo-label">
+                        <div>Agility</div>
+                    </div>
+                    <div class="thermo-end">
+                        <input name="attr_agility_mod" readonly="true"/>
+                    </div>
+                </div>
+                <!-- Intelligence -->
+                <div class="thermo">
+                    <div class="thermo-start">
+                        <input type="text" name="attr_intelligence" value="0">
+                    </div>
+                    <div class="thermo-label">
+                        <div>Intelligence</div>
+                    </div>
+                    <div class="thermo-end">
+                        <input name="attr_intelligence_mod" readonly="true"/>
+                    </div>
+                </div>
+                <!-- Wisdom -->
+                <div class="thermo">
+                    <div class="thermo-start">
+                        <input type="text" name="attr_wisdom" value="0">
+                    </div>
+                    <div class="thermo-label">
+                        <div>Wisdom</div>
+                    </div>
+                    <div class="thermo-end">
+                        <input name="attr_wisdom_mod" readonly="true"/>
+                    </div>
+                </div>
+                <!-- Charisma -->
+                <div class="thermo">
+                    <div class="thermo-start">
+                        <input type="text" name="attr_charisma" value="0">
+                    </div>
+                    <div class="thermo-label">
+                        <div>Charisma</div>
+                    </div>
+                    <div class="thermo-end">
+                        <input name="attr_charisma_mod" readonly="true"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- right middle col -->
+        <div class="layout-col">
+            <!-- Defences -->
+            <div class="section-banner">
+                <div class="section-banner-label">
+                    Defences
+                </div>
+            </div>
+            <div class="flex-col-center">
+                <div class="flex-col-center">
+                    <div class="thermo-header">
+                        <div>
+                            <div class="tinytext">Score</div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="tinytext">Level</div>
+                            <div class="tinytext">Ability</div>
+                            <div class="tinytext">Class</div>
+                            <div class="tinytext">Feats</div>
+                            <div class="tinytext">Bonus</div>
+                        </div>
+                    </div>
+                    <!-- Fortitude -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_fortitude" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Fortitude</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_fortitude" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_fortitude" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_fortitude" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_fortitude" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_fortitude" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Reflexes -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_reflexes" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Reflexes</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_reflexes" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_reflexes" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_reflexes" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_reflexes" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_reflexes" placeholder="0">
+                        </div>
+                    </div>
+                    <!-- Willpower -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_willpower" placeholder="0">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Willpower</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_willpower" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_willpower" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_willpower" placeholder="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_willpower" placeholder="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_willpower" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Condition -->
+            <div class="section-condition">
+                <div class="section-banner">
+                    <div class="section-banner-label">
+                        Condition
+                    </div>
+                </div>
+                <div class="section-border">
+                    <div class="flex-col-center">
+                        <div>Normal</div>
+                        <div class="flex-row">
+                            <input type="checkbox" name="attr_condition1">
+                            <span>-1</span>
+                        </div>
+                        <div class="flex-row">
+                            <input type="checkbox" name="attr_condition2">
+                            <span>-2</span>
+                        </div>
+                        <div class="flex-row">
+                            <input type="checkbox" name="attr_condition3">
+                            <span>-5</span>
+                        </div>
+                        <div class="flex-row">
+                            <input type="checkbox" name="attr_condition4">
+                            <span>-10</span>
+                        </div>
+                        <div class="flex-row">
+                            <input type="checkbox" name="attr_condition5">
+                            <span>Unconcious</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feats -->
+            <div class="section-banner">
+                <div class="section-banner-label">
+                    Feats
+                </div>
+            </div>
+            <div class="section-border">
+                <div class="section-feats">
+                    <fieldset class="repeating_feats">
+                        <div class="toggle-container">
+                            <input type="checkbox" class="toggle-hide" name="attr_featshide" />
+                            <input class="feat-title" type="text" name="attr_featsname" />
+                            <div class="toggle-body">
+                                <textarea class="feat-desc" type="text" name="attr_featsdescription"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- Talents -->
+            <div class="section-banner">
+                <div class="section-banner-label">
+                    Talents
+                </div>
+            </div>
+            <div class="section-border">
+                <div class="section-talents">
+                    <fieldset class="repeating_talents">
+                        <div class="toggle-container">
+                            <input type="checkbox" class="toggle-hide" name="attr_talentshide" />
+                            <input class="talents-title" type="text" name="attr_talentsname" />
+                            <div class="toggle-body">
+                                <textarea class="talents-desc" type="text" name="attr_talentsdescription"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
             </div>
         </div>
     </div>
-    <!-- right col -->
+</div> <!-- end character page -->
+<div class='sheet-page-spells'>
+    <h2>Spells</h2>
+    <span>Spells</span>
+</div><!-- end spell page -->
+<div class='sheet-page-journal'>
+    <h2>Journal/Notes</h2>
+    <span>Journal/Notes Stuff Goes here</span>
+</div><!-- end journal page -->
 
 
-</div>
+<input type="hidden" name="attr_halflevel" value="0" readonly="true"> 
+
+<input type="hidden" name="attr_strength_mod" value="0" readonly="true">
+<input type="hidden" name="attr_agility_mod" value="0" readonly="true">
+<input type="hidden" name="attr_vitality_mod" value="0" readonly="true">
+<input type="hidden" name="attr_intelligence_mod" value="0" readonly="true">
+<input type="hidden" name="attr_wisdom_mod" value="0" readonly="true">
+<input type="hidden" name="attr_charisma_mod" value="0" readonly="true">
 
 
-<script type="text/javascript"> //type="text/worker"
-    
-    ['strength','agility','constitution','intelligence','wisdom','charisma'].forEach(attr => {
-        on(`change:${attr}_base change:${attr}_bonus`, function() {
-            update_attr(`${attr}`);
+<script type="text/worker"> //type="text/worker"
+
+    console.log('====== Last Arc Worker started =======');
+
+    //button pages
+    const buttonlist = ["pagecharacter","pagejournal","pagespells"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
         });
     });
 
-    ['strength','agility','constitution','intelligence','wisdom','charisma'].forEach(attr => {
-        on(`change:${attr}`, function() {
-            update_mod(`${attr}`);
+    //update ability mods on ability update
+    ['strength','agility','vitality','intelligence','wisdom','charisma'].forEach(attr => {
+        on('change:' + attr, function() { 
+            update_mod(attr);
+            (attr === "strength") ? update_weight() : false;
         });
     });
 
     var update_mod = function (attr) {
         getAttrs([attr], function(v) {
-            var attr_abr = attr.substring(0,3);
             var finalattr = v[attr] && isNaN(v[attr]) === false ? Math.floor((parseInt(v[attr], 10) - 10) / 2) : 0;
             var update = {};
             update[attr + "_mod"] = finalattr;
-            update["npc_" + attr_abr + "_negative"] = v[attr] && !isNaN(v[attr]) && parseInt(v[attr], 10) < 10 ? 1 : 0;
             setAttrs(update);
+        });
+    };
+
+    //update characterlevel/halflevel
+    on('change:characterlevel', function() {
+        getAttrs(["characterlevel"], function(values) {
+            var update = {};
+            update["halflevel"] = Math.floor(values.characterlevel / 2);
+            setAttrs(update);
+        });
+    });
+
+    on("change:repeating_inventory:itemquantity", function() {
+		update_weight();
+	});
+
+    on("change:repeating_inventory:itembulk", function() {
+		update_weight();
+	});
+
+    var update_weight = function() {
+        console.log('update_weight');
+        let update = {};
+        let btotal = 0;
+        let weight_attrs = [];
+        getSectionIDs("repeating_inventory", (idarray) => {
+            _.each(idarray, (currentID, i) => {
+                weight_attrs.push('repeating_inventory_${currentID}_itembulk');
+                weight_attrs.push('repeating_inventory_${currentID}_itemquantity');
+            });
+            getAttrs(weight_attrs, (v) => {
+                _.each(idarray, (currentID, i) => {
+                    if (v['repeating_inventory_${currentID}_itembulk'] && isNaN(parseInt(v['repeating_inventory_${currentID}_itembulk'], 10)) === false) {
+                        count = v['repeating_inventory_${currentID}_itemquantity'] && isNaN(parseFloat(v['repeating_inventory_${currentID}_itemquantity'])) === false ? parseFloat(v['repeating_inventory_${currentID}_itemquantity']) : 1;
+                        btotal = btotal + (parseFloat(v['repeating_inventory_${currentID}_itembulk']) * count);
+                    }
+                });
+
+                update["bulktotal"] = btotal;
+
+                setAttrs(update, {silent: true});
+            });
         });
     };
 
