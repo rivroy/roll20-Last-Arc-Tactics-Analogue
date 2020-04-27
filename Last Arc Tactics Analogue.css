@@ -11,6 +11,27 @@ textarea{
     box-sizing: border-box;
 }
 
+input {
+    background-color: transparent;
+    border: solid 1px transparent;
+}
+
+input:hover {
+    background-color: rgba(0, 124, 234, 0.25);
+    border: solid 1px black;
+}
+
+input[readonly="true"],
+input[disabled="true"] {
+    cursor: default;
+}
+
+input[readonly="true"]:hover,
+input[disabled="true"]:hover {
+    border: solid 1px transparent;
+    background-color: transparent;
+}
+
 /* place item controls infront of relative elements */
 .itemcontrol{
   z-index: 5;
@@ -220,23 +241,17 @@ textarea {
 }
 
 .sheet-icon-border-baseattackbonus{
-    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/damage-threshold.png');
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/damage-threshold-background.png');
 }
 
 .sheet-section-misc-center .sheet-stat-stack input{
     margin: 0 auto;
-    background: transparent;
-    border: solid 1px transparent;
     padding: 0;
     width: 35px;
     height: 35px;
     font-size: 1.8em;
     font-weight: bold;
     text-align: center;
-}
-
-.sheet-section-misc-center .sheet-stat-stack input:hover{
-    border: solid 1px grey;
 }
 
 /* end sheet section misc center */
@@ -269,8 +284,6 @@ textarea {
 
 .sheet-section-hp-mana .sheet-icon input{
     margin: 0 auto;
-    background: transparent;
-    border: solid 1px transparent;
     padding: 0;
     width: 35px;
     height: 35px;
@@ -521,6 +534,12 @@ textarea {
     justify-content: center;
 }
 
+.sheet-thermo .sheet-thermo-node:nth-child(even){
+    border: solid 3px #d7d7d7;
+    border-left: 0;
+    border-right: 0;
+}
+
 .sheet-thermo .sheet-thermo-end{
     background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/thermo-end-background.png');
     background-size: cover;
@@ -540,14 +559,7 @@ textarea {
     font-weight: bold;
 }
 
-.sheet-thermo input{
-    background-color: transparent;
-    border: solid 1px transparent;
-}
 
-.sheet-thermo input:hover{
-    border: solid 1px grey;
-}
 /* end horizontal bars */
 
 /* feats */

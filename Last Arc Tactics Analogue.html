@@ -258,7 +258,7 @@
                                 disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Disable Device</div>
+                            <div style="font-size: 0.9em;">Disable Device</div>
                         </div>
                         <div class="thermo-node">
                             <input name="attr_halflevel" readonly="true"/>
@@ -310,7 +310,7 @@
                                 disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Animal Handling</div>
+                            <div style="font-size: 0.9em;">Animal Handling</div>
                         </div>
                         <div class="thermo-node">
                             <input name="attr_halflevel" readonly="true"/>
@@ -644,11 +644,11 @@
                     <div class="thermo">
                         <div class="thermo-start">
                             <input type="text" name="attr_passiveperception"
-                                value="@{passiveperceptionbasebonus}+@{passiveperceptionbonus}"
+                                value="@{perception}+@{passiveperceptionbasebonus}+@{passiveperceptionbonus}"
                                 disabled="true">
                         </div>
                         <div class="thermo-label">
-                            <div>Passive Perception</div>
+                            <div style="font-size: 0.7em;">Passive Perception</div>
                         </div>
                         <div class="thermo-node">
                             <input name="attr_perception" readonly="true">
@@ -759,6 +759,40 @@
                             <input type="text" name="attr_initiativebonus" value="0">
                         </div>
                     </div>
+                    <div class="thermo-header">
+                        <div>
+                            <div class="tinytext">Score</div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="tinytext">Base</div>
+                            <div class="tinytext">Feats</div>
+                            <div class="tinytext">Bonus</div>
+                            <div class="tinytext">Penalty</div>
+                        </div>
+                    </div>
+                    <!-- Speed -->
+                    <div class="thermo">
+                        <div class="thermo-start">
+                            <input type="text" name="attr_speed"
+                                value="@{speedbase}+@{speedfeatsbonus}+@{speedbonus}+@{speedpenaltybonus}"
+                                disabled="true">
+                        </div>
+                        <div class="thermo-label">
+                            <div>Speed</div>
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_speedbase" value="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_speedfeatsbonus" value="0">
+                        </div>
+                        <div class="thermo-node">
+                            <input type="text" name="attr_speedbonus" value="0">
+                        </div>
+                        <div class="thermo-end">
+                            <input type="text" name="attr_speedpenaltybonus" value="0">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -825,7 +859,7 @@
                         <div>Maximum Bulk</div>
                         <div class="flex-col">
                             <span class="tinytext">Strength</span>
-                            <span class="border inventory-maxbulkinput" type="text" name="attr_strength" disabled>
+                            <span class="border inventory-maxbulkinput" type="text" name="attr_strength" disabled="true">
                         </div>
                         <div class="flex-col">
                             <span class="tinytext">Bonus</span>
@@ -1019,6 +1053,38 @@
                         </div>
                         <div class="thermo-end">
                             <input type="text" name="attr_willpowerbonus" value="0">
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Damage Threshold -->
+                        <div class="thermo-header">
+                            <div>
+                                <div class="tinytext">Score</div>
+                            </div>
+                            <div class="flex-row">
+                                <div class="tinytext">Fortitude</div>
+                                <div class="tinytext">Feats</div>
+                                <div class="tinytext">Bonus</div>
+                            </div>
+                        </div>
+                        <div class="thermo">
+                            <div class="thermo-start">
+                                <input type="text" name="attr_damagethreshold"
+                                    value="@{fortitude}+@{damagethresholdfeatsbonus}+@{damagethresholdbonus}"
+                                    disabled="true">
+                            </div>
+                            <div class="thermo-label">
+                                <div style="font-size: 0.8em;">Damage Threshold</div>
+                            </div>
+                            <div class="thermo-node">
+                                <input type="text" name="attr_fortitude" readonly="true">
+                            </div>
+                            <div class="thermo-node">
+                                <input type="text" name="attr_damagethresholdfeatsbonus" value="0">
+                            </div>
+                            <div class="thermo-end">
+                                <input type="text" name="attr_damagethresholdbonus" value="0">
+                            </div>
                         </div>
                     </div>
                 </div>
