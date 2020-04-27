@@ -296,12 +296,14 @@ textarea {
 /* sheet-section-attacks */
 
 .sheet-section-attacks {
-  margin: 8px;
+  margin: 4px;
+  padding: 2px;
+  border-radius: 4px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 6px;
-  grid-row-gap: 4px;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
 }
 
 .sheet-section-attacks .sheet-grid-one {
@@ -343,7 +345,7 @@ textarea {
 
 
 .sheet-section-attacks input {
-  background: #e8e8e8;
+  background: #eaeaea;
   border: solid 1px transparent;
   margin: 0;
   padding: 10px 0 0 8px;
@@ -501,7 +503,8 @@ textarea {
 .sheet-thermo .sheet-thermo-label input{
     font-size: 1.1em;
     font-weight: bold;
-    margin: 7px;
+    margin: 6px;
+    padding: 0;
 }
 
 .sheet-thermo .sheet-thermo-node{
