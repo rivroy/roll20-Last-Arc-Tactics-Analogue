@@ -219,6 +219,10 @@ textarea {
     background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/base-attack-bonus-background.png');
 }
 
+.sheet-icon-border-baseattackbonus{
+    background-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/damage-threshold.png');
+}
+
 .sheet-section-misc-center .sheet-stat-stack input{
     margin: 0 auto;
     background: transparent;
