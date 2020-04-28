@@ -45,14 +45,14 @@ input[disabled="true"]:hover {
     font-size: 14px;
 }
 .btn.repcontrol_edit::after{
-    content: "l";
+    content: ")";
     font-family: "Pictos";
     font-weight: normal;
     font-style: normal;
     font-size: 14px;
 }
 .editmode ~ .repcontrol .btn.repcontrol_edit::after{
-    content: "*";
+    content: "(";
 }
 .btn.repcontrol_del::after{
     content: "#";
@@ -82,6 +82,26 @@ input[disabled="true"]:hover {
     display: flex;
     justify-content: space-between;
     flex-flow: row-reverse;
+}
+
+/* roll button styling */
+
+.charsheet button[type="roll"].btn{
+    border: 0;
+    background: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.charsheet button[type="roll"].btn::before{
+    display:none;
+}
+
+.charsheet button[type="roll"].btn:hover{
+    color: red;
 }
 
 /* Make inputs fit parent containers*/
@@ -374,6 +394,15 @@ textarea {
 
 /* end sheet-section-attacks */
 
+/* section condition */
+
+.sheet-section-condition .sheet-conditionlabel {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* end section condition */
+
 /* section inventory */
 
 .sheet-section-inventory .sheet-label {
@@ -624,3 +653,127 @@ input.sheet-toggle-hide:checked ~ div.sheet-toggle-body {
 }
 
 /* end character pages */
+
+
+
+/* custom roll template */
+
+/* Smaller margins - remove these if you want the huge default left margin */
+.sheet-rolltemplate-simple {
+    margin-left: -37px;
+    display: flex;
+    justify-content: center;
+}
+.withoutavatars .sheet-rolltemplate-simple {
+    margin-left: -7px;
+}
+
+.sheet-rolltemplate-simple .sheet-container {
+    border: 1px solid;
+    /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+    border-color: var(--header-bg-color);
+    padding: 6px;
+    border-radius: 10px;
+    min-width: 80px;
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-simple .sheet-header {
+    background-color: var(--header-bg-color);
+    /* change text-align to center to center the header text */
+    text-align: left;
+    color: var(--header-text-color);
+}
+
+.sheet-rolltemplate-simple .sheet-content + .sheet-header{
+    border-bottom: solid 1px black;
+}
+
+.sheet-rolltemplate-simple .sheet-title {
+    font-size:1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sheet-rolltemplate-simple .sheet-subtitle {
+    font-size:0.8em;
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+
+.sheet-rolltemplate-simple .sheet-description {
+    font-size:0.9em;
+}
+
+.sheet-rolltemplate-simple .sheet-roll {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 3px 0;
+}
+
+.sheet-rolltemplate-simple .sheet-roll .inlinerollresult{
+    display: inline-block;
+    background-color: #fff;
+    border: 2px solid transparent;
+}
+
+.sheet-rolltemplate-simple .sheet-roll .inlinerollresult.fullcrit{
+    background-color: rgb(171, 253, 142);
+    border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-simple .sheet-roll .inlinerollresult.fullfail{
+    background-color: #FFB1B1;
+    border: 2px solid #B31515;
+}
+
+/* example colors */
+.sheet-rolltemplate-simple .sheet-container {
+    /* this is the default color */
+    background: white;
+}
+
+
+/* Allprops part */
+.sheet-rolltemplate-simple .sheet-content {
+    background: #FFF;
+}
+.sheet-rolltemplate-simple .sheet-content > div {
+    padding: 5px;
+}
+
+/* Left column */
+.sheet-rolltemplate-simple .sheet-content .sheet-key {
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+
+/* Empty rule, use this if you want to change the right column 
+.sheet-rolltemplate-simple .sheet-value {
+}
+*/
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-simple .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-simple .sheet-content :nth-child(4n) {
+    background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-simple .sheet-desc {
+    grid-column: span 2;
+    padding: 5px;
+    text-align: center;
+}
+
+/* end custom roll template */
+
+
+
+
+
+
+
+
