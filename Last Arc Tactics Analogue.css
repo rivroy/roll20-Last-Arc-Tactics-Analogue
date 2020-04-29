@@ -22,12 +22,18 @@ input:hover {
 }
 
 input[readonly="true"],
-input[disabled="true"] {
+input[disabled="true"],
+textarea[readonly="true"],
+textarea[disabled="true"] {
     cursor: default;
+    background-color: transparent;
+    border: solid 1px transparent;
 }
 
 input[readonly="true"]:hover,
-input[disabled="true"]:hover {
+input[disabled="true"]:hover,
+textarea[readonly="true"]:hover,
+textarea[disabled="true"]:hover {
     border: solid 1px transparent;
     background-color: transparent;
 }
@@ -116,6 +122,10 @@ img {
 
 textarea {
 	resize: vertical;
+}
+
+select {
+    margin: 0;
 }
 
 /* common styles */
@@ -370,14 +380,15 @@ textarea {
 }
 
 .sheet-section-attacks .sheet-label{
-  position: absolute;
-  width: auto;
-  padding: 0;
-  margin: 0 0 0 3px;
-  color: grey;
-  top: 0;
-  left: 0;
-  font-size: 0.6em;
+    position: absolute;
+    width: auto;
+    padding: 0;
+    margin: 0 0 0 3px;
+    color: grey;
+    top: 0;
+    left: 0;
+    font-size: 0.7em;
+    line-height: 1.4em;
 }
 
 
@@ -399,6 +410,11 @@ textarea {
 .sheet-section-condition .sheet-conditionlabel {
     text-align: center;
     font-weight: bold;
+}
+
+.sheet-section-condition .sheet-condition-radio-container{
+    justify-content: space-around;
+    width: 100%;
 }
 
 /* end section condition */
@@ -474,17 +490,19 @@ textarea {
 
 /* section banner */
 .sheet-section-banner{
-  border-width: 8px 60px 8px 60px;
-  border-style: solid;
-  border-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/section-banner.png') 17 115 15 115 round stretch;
+    border-width: 8px 60px 8px 60px;
+    border-style: solid;
+    border-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/section-banner.png') 17 115 15 115 round stretch;
+    z-index: 1;
+    position: relative;
 }
 
 .sheet-section-banner .sheet-section-banner-label{
-  font-size: 1.2em;
-  background: black;
-  color:white;
-  text-align: center;
-  font-weight: bold;
+    font-size: 1.2em;
+    background: black;
+    color:white;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* end section banner */
@@ -492,10 +510,11 @@ textarea {
 /* section border */
 
 .sheet-section-border{
-  border-width: 0 14px 14px 14px;
-  border-style: solid;
-  border-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/section-border.png') 24 24 24 24 round stretch;
-  margin: -4px 20px 0 20px;
+    border-width: 0 14px 14px 14px;
+    border-style: solid;
+    border-image: url('https://github.com/rivroy/roll20-Last-Arc-Tactics-Analogue/raw/master/images/section-border.png') 24 24 24 24 round stretch;
+    margin: -6px 20px 0 20px;
+    padding-top: 4px;
 }
 
 /* end section border*/
@@ -593,11 +612,51 @@ textarea {
 
 /* feats */
 
-.sheet-feat-title{
+.sheet-section-feats .sheet-feat-container{
+    margin: 2px;
+    padding: 2px;
+}
+
+
+.sheet-section-feats .sheet-feat-title{
+    display: block;
+    width: 100%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: 1.4em;
     font-weight: bold;
 }
+
+.sheet-section-feats .sheet-feat-subtitle-container{
+    line-height: 8px;
+    padding-bottom: 4px;
+}
+
+.sheet-section-feats .sheet-feat-subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.sheet-section-feats .sheet-feat-row-input{
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.sheet-section-feats .sheet-feat-row-input input,
+.sheet-section-feats .sheet-feat-row-input select{
+    padding: 1px;
+    margin: 0;
+    height: auto;
+}
+
+
+.sheet-section-feats .sheet-feat-editing{
+    box-shadow: 0 0 0 2px black;
+    outline: dashed 2px yellow;
+    padding: 3px;
+}
+
 
 /* end feats */
 
@@ -611,30 +670,95 @@ textarea {
 
 /* end talents */
 
-/* start hide toggle*/
-
-input.sheet-toggle-show{
-
-} 
+/* start toggle*/
 
 .sheet-toggle-container{
     position: relative;
-    margin-bottom: 4px;
 }
 
-.sheet-toggle-container .sheet-toggle-hide{
+/* hide these since we use label::after to simulate icons*/
+.sheet-toggle-hide,
+.sheet-toggle-show,
+.sheet-toggle-swap{
+    position: absolute;
+    width: auto;
+    opacity: 0;
+    top: -9999px;
+    left: -9999px;
+    margin: 0;
+    padding: 0;
+}
+
+.sheet-toggle-label-wrapper{
+    position: absolute;
+    width: auto;
+    right: 0;
+    top: 0;
+}
+
+
+.sheet-toggle-label-wrapper::before{
+    z-index: 5;
+    font-family: "Pictos";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
     position: absolute;
     right: 0;
     width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.sheet-toggle-label-wrapper.sheet-right-far::before{
+    right: 0;
+}
+.sheet-toggle-label-wrapper.sheet-right-middle::before{
+    right: 18px;
+}
+.sheet-toggle-label-wrapper.sheet-right-close::before{
+    right: 32px;
+}
+/* make eye show icons hide unless hovered*/
+.sheet-feat-container:hover .sheet-toggle-label-wrapper.sheet-show-icon::before{
+    content: "E";
+}
+.sheet-toggle-label-wrapper.sheet-show-icon:hover::before{
+    color:darkturquoise;
+}
+.sheet-feat-container:hover .sheet-toggle-hide:checked ~ .sheet-toggle-label-wrapper.sheet-show-icon::before{
+    content: "E";
+}
+/* make edit icons hide unless editing*/
+.sheet-feat-container:hover .sheet-toggle-label-wrapper.sheet-edit-icon::before{
+    content: "y";
+}
+.sheet-toggle-label-wrapper.sheet-edit-icon:hover::before{
+    color:darkturquoise;
+}
+.sheet-toggle-swap:checked ~ .sheet-toggle-label-wrapper.sheet-edit-icon::before{
+    content: "y";
 }
 
 
-input.sheet-toggle-show:not(:checked) ~ div.sheet-toggle-body,
-input.sheet-toggle-hide:checked ~ div.sheet-toggle-body {
+/* toggling show, hide, swap*/
+
+input.sheet-toggle-show:not(:checked) ~ .sheet-toggle-body,
+input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     display: none;
 }
 
-/* end hide toggle*/
+.sheet-toggle-swap-a,
+.sheet-toggle-swap:checked ~ .sheet-toggle-swap-b {
+  display: block;
+}
+
+.sheet-toggle-swap-b,
+.sheet-toggle-swap:checked ~ .sheet-toggle-swap-a {
+  display: none;
+}
+
+/* end toggle*/
 
 /* character pages */
 
