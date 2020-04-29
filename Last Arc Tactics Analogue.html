@@ -1222,8 +1222,85 @@
     </div>
 </div> <!-- end character page -->
 <div class='sheet-page-spells'>
-    <h2>Spells</h2>
-    <span>Spells</span>
+    <div class="layout-3col">
+        <div class="layout-col">
+            <!-- spells -->
+            <div class="section-spells">
+                <div class="section-banner">
+                    <div class="section-banner-label">
+                        Spells
+                    </div>
+                </div>
+                <div>
+                    <fieldset class="repeating_spells">
+                        <div class="spell-container">
+                            <div class="toggle-container">
+                                <input type="checkbox" class="toggle-swap right-far" name="attr_spelledit"/>
+                                <label class="toggle-label-wrapper right-far edit-icon">
+                                    <input type="checkbox" class="toggle-swap" name="attr_spelledit"/>
+                                </label>
+                                <div class="toggle-container toggle-swap-a">
+                                    <input type="checkbox" class="toggle-hide" name="attr_spelldescriptionhide"/>
+                                    <label class="toggle-label-wrapper right-middle show-icon">
+                                        <input type="checkbox" class="toggle-hide" name="attr_spelldescriptionhide"/>
+                                    </label>
+                                    <button type="roll" value="&{template:spell} {{title=@{spellname}}} {{subtitle=Time:@{spelltime}  Target:@{spelltarget}}} {{description=@{spelldescription}}} {{spellcrafteffect=@{spellspellcrafteffect}}} {{special=@{spellspecial}}}" name="roll_RepeatingSpells">
+                                        <span class="spell-title" name="attr_spellname"></span>
+                                    </button>
+                                    <div class="spell-subtitle-container">
+                                        <span class="spell-subtitle">Time: </span>
+                                        <span class="spell-subtitle" name="attr_spelltime"></span>
+                                        &nbsp;
+                                        <span class="spell-subtitle">Target: </span>
+                                        <span class="spell-subtitle" name="attr_spelltarget"></span>
+                                    </div>
+                                    <div class="toggle-body">
+                                        <span class="spell-desc" name="attr_spelldescription"></span>
+                                    </div>
+                                </div>
+                                <div class="toggle-swap-b spell-editing">
+                                    <div class="spell-row-input">
+                                        <span>Name: </span>
+                                        <input type="text" name="attr_spellname" value="My New Spell"/>
+                                    </div>
+                                    <div class="spell-row-input">
+                                        <span>School: </span>
+                                        <select name="attr_spellschool">
+                                            <option value="spell" selected>Alteration</option>
+                                            <option value="Talent">Divination</option>
+                                            <option value="Class">Evocation</option>
+                                            <option value="Illusion">Illusion</option>
+                                            <option value="Necromancy">Necromancy</option>
+                                            <option value="Restoration">Restoration</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="spell-row-input">
+                                        <span>Time: </span>
+                                        <input type="text" name="attr_spelltime" />
+                                    </div>
+                                    <div class="spell-row-input">
+                                        <span>Target: </span>
+                                        <input type="text" name="attr_spelltarget" />
+                                    </div>
+                                    <div class="toggle-body">
+                                        <textarea class="spell-desc" type="text" name="attr_spelldescription" placeholder="Description..."></textarea>
+                                    </div>
+                                    <div class="toggle-body">
+                                        <textarea class="spell-desc" type="text" name="attr_spellspellcrafteffect" placeholder="Spellcraft Effect..."></textarea>
+                                    </div>
+                                    <div class="toggle-body">
+                                        <textarea class="spell-desc" type="text" name="attr_spellspecial" placeholder="Special..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <!-- Skill Actions -->
+    </div>
 </div><!-- end spell page -->
 <div class='sheet-page-journal'>
     <h2>Journal/Notes</h2>
@@ -1245,7 +1322,7 @@
 
 <!-- custom roll template -->
 <rolltemplate class="sheet-rolltemplate-simple">
-    <div class="container sheet-color-{{color}}">
+    <div class="container">
         <div class="roll">
             {{#roll}}<div class="title">{{roll}}</div>{{/roll}}
         </div>
@@ -1255,6 +1332,20 @@
         </div>
         <div class="content">
             {{#description}}<div class="description">{{description}}</div>{{/description}}
+        </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-spell">
+    <div class="container">
+        <div class="header">
+            {{#title}}<div class="title">{{title}}</div>{{/title}}
+            {{#subtitle}}<div class="subtitle">{{subtitle}}</div>{{/subtitle}}
+        </div>
+        <div class="content">
+            {{#description}}<div class="description">{{description}}</div>{{/description}}
+            {{#spellcrafteffect}}<div class="spellcrafteffect">{{spellcrafteffect}}</div>{{/spellcrafteffect}}
+            {{#special}}<div class="special">{{special}}</div>{{/special}}
         </div>
     </div>
 </rolltemplate>

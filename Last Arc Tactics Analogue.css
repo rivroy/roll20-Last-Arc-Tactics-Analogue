@@ -5,10 +5,11 @@
     width: 950px;
 }
 
-/* Universal styling applied to all elements of these types */
+/* General Universal stylings for sheet */
 
 textarea{
     box-sizing: border-box;
+    height: 70px;
 }
 
 input {
@@ -617,7 +618,6 @@ select {
     padding: 2px;
 }
 
-
 .sheet-section-feats .sheet-feat-title{
     display: block;
     width: 100%;
@@ -660,15 +660,47 @@ select {
 
 /* end feats */
 
-/* talents */
+/* spells section */
 
-.sheet-talents-title{
+.sheet-section-spells .sheet-spell-title{
+    display: block;
+    width: 100%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
-/* end talents */
+.sheet-section-spells .sheet-spell-subtitle-container{
+    line-height: 8px;
+    padding-bottom: 4px;
+}
+
+.sheet-section-spells .sheet-spell-subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.sheet-section-spells .sheet-spell-row-input{
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.sheet-section-spells .sheet-spell-row-input input,
+.sheet-section-spells .sheet-spell-row-input select{
+    padding: 1px;
+    margin: 0;
+    height: auto;
+}
+
+.sheet-section-spells .sheet-spell-editing{
+    box-shadow: 0 0 0 2px black;
+    outline: dashed 2px yellow;
+    padding: 3px;
+}
+
+/* end spells section */
 
 /* start toggle*/
 
@@ -720,18 +752,21 @@ select {
     right: 32px;
 }
 /* make eye show icons hide unless hovered*/
-.sheet-feat-container:hover .sheet-toggle-label-wrapper.sheet-show-icon::before{
+.sheet-feat-container:hover .sheet-toggle-label-wrapper.sheet-show-icon::before,
+.sheet-spell-container:hover .sheet-toggle-label-wrapper.sheet-show-icon::before{
     content: "E";
 }
 .sheet-toggle-label-wrapper.sheet-show-icon:hover::before{
     color:darkturquoise;
 }
-.sheet-feat-container:hover .sheet-toggle-hide:checked ~ .sheet-toggle-label-wrapper.sheet-show-icon::before{
-    content: "E";
+.sheet-feat-container:hover .sheet-toggle-hide:checked ~ .sheet-toggle-label-wrapper.sheet-show-icon::before,
+.sheet-spell-container:hover .sheet-toggle-hide:checked ~ .sheet-toggle-label-wrapper.sheet-show-icon::before{
+        content: "E";
 }
 /* make edit icons hide unless editing*/
-.sheet-feat-container:hover .sheet-toggle-label-wrapper.sheet-edit-icon::before{
-    content: "y";
+.sheet-feat-container:hover .sheet-toggle-label-wrapper.sheet-edit-icon::before,
+.sheet-spell-container:hover .sheet-toggle-label-wrapper.sheet-edit-icon::before{
+        content: "y";
 }
 .sheet-toggle-label-wrapper.sheet-edit-icon:hover::before{
     color:darkturquoise;
@@ -892,10 +927,82 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     text-align: center;
 }
 
+/* spell custom roll template */
+
+.sheet-rolltemplate-spell .sheet-header {
+    background-color: var(--header-bg-color);
+    /* change text-align to center to center the header text */
+    text-align: left;
+    color: var(--header-text-color);
+}
+
+.sheet-rolltemplate-spell .sheet-content + .sheet-header{
+    border-bottom: solid 1px black;
+}
+
+.sheet-rolltemplate-spell .sheet-title {
+    font-size:1em;
+    text-align: left;
+    font-weight: bold;
+    background: rgb(25,173,212);
+    background: linear-gradient(90deg, rgba(25,173,212,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.sheet-rolltemplate-spell .sheet-subtitle {
+    font-size:0.8em;
+    text-align: left;
+    font-style: italic;
+    color: gray;
+    background: #e6e6e6;
+}
+
+.sheet-rolltemplate-spell .sheet-description,
+.sheet-rolltemplate-spell .sheet-spellcrafteffect,
+.sheet-rolltemplate-spell .sheet-special {
+    font-size:0.9em;
+}
+
+/* example colors */
+.sheet-rolltemplate-spell .sheet-container {
+    /* this is the default color */
+    background: white;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-spell .sheet-content {
+    background: #FFF;
+}
+.sheet-rolltemplate-spell .sheet-content > div {
+    padding: 5px;
+}
+
+/* Left column */
+.sheet-rolltemplate-spell .sheet-content .sheet-key {
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-spell .sheet-content :nth-child(even) {
+    background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-spell .sheet-desc {
+    grid-column: span 2;
+    padding: 5px;
+    text-align: center;
+}
+
 /* end custom roll template */
 
 
-
+title
+subtitle
+description
+spellcrafteffect
+special
 
 
 
