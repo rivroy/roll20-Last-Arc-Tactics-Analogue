@@ -1266,6 +1266,16 @@
 
     console.log('====== Last Arc Worker started =======');
 
+    //do basic calcs
+    on('sheet:opened',function(){
+        update_characterlevel();
+        update_condition();
+        ['strength','agility','vitality','intelligence','wisdom','charisma'].forEach(attr => {
+            update_mod(attr);
+        });
+        update_weight();
+    });
+
     //button pages
     const buttonlist = ["pagecharacter","pagejournal","pagespells"];
     buttonlist.forEach(button => {
@@ -1284,6 +1294,24 @@
         });
     });
 
+    //update characterlevel/halflevel
+    on('change:characterlevel', function() {
+        update_characterlevel();
+    });
+
+    //update character Condition
+    on('change:condition', function() { 
+        update_condition();
+    });
+
+    on("change:repeating_inventory:itemquantity", function() {
+		update_weight();
+	});
+
+    on("change:repeating_inventory:itembulk", function() {
+		update_weight();
+	});
+
     var update_mod = function (attr) {
         getAttrs([attr], function(v) {
             var finalattr = v[attr] && isNaN(v[attr]) === false ? Math.floor((parseInt(v[attr], 10) - 10) / 2) : 0;
@@ -1293,17 +1321,7 @@
         });
     };
 
-    //update characterlevel/halflevel
-    on('change:characterlevel', function() {
-        getAttrs(["characterlevel"], function(values) {
-            var update = {};
-            update["halflevel"] = Math.floor(values.characterlevel / 2);
-            setAttrs(update);
-        });
-    });
-
-    //update character Condition
-    on('change:condition', function() { 
+    var update_condition = function() {
         getAttrs(['condition'], function(v) {
             var update = {};
             var cond = v['condition'];
@@ -1322,15 +1340,16 @@
                 update["conditionlabel"] = 'Unconcious';
             setAttrs(update);
         });
-    });
+    };
 
-    on("change:repeating_inventory:itemquantity", function() {
-		update_weight();
-	});
-
-    on("change:repeating_inventory:itembulk", function() {
-		update_weight();
-	});
+    var update_characterlevel = function(){
+        getAttrs(["characterlevel"], function(values) {
+            var update = {};
+            update["characterlevel"] = values.characterlevel;
+            update["halflevel"] = Math.floor(values.characterlevel / 2);
+            setAttrs(update);
+        });
+    };
 
     var update_weight = function() {
         let update = {};
