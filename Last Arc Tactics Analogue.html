@@ -1182,7 +1182,9 @@
                                     <label class="toggle-label-wrapper right-middle show-icon">
                                         <input type="checkbox" class="toggle-hide" name="attr_featdescriptionhide"/>
                                     </label>
-                                    <span class="feat-title" name="attr_featname"></span>
+                                    <button type="roll" value="&{template:card} {{title=@{featname}}} {{first=@{featdescription}}}" name="roll_RepeatingFeats">
+                                        <span class="feat-title" name="attr_featname"></span>
+                                    </button>
                                     <div class="feat-subtitle-container">
                                         <span class="feat-subtitle" name="attr_feattype"></span><span class="feat-subtitle">: </span><span class="feat-subtitle" name="attr_featsource"></span>
                                     </div>
@@ -1193,7 +1195,7 @@
                                 <div class="toggle-swap-b feat-editing">
                                     <div class="feat-row-input">
                                         <span>Name: </span>
-                                        <input type="text" name="attr_featname" />
+                                        <input type="text" name="attr_featname" value="My New Feat"/>
                                     </div>
                                     <div class="feat-row-input">
                                         <span>Type: </span>
@@ -1210,7 +1212,7 @@
                                         <input type="text" name="attr_featsource" />
                                     </div>
                                     <div class="toggle-body">
-                                        <textarea class="feat-desc" type="text" name="attr_featdescription"></textarea>
+                                        <textarea class="feat-desc" type="text" name="attr_featdescription" placeholder="Description..."></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -1244,7 +1246,7 @@
                                     <label class="toggle-label-wrapper right-middle show-icon">
                                         <input type="checkbox" class="toggle-hide" name="attr_spelldescriptionhide"/>
                                     </label>
-                                    <button type="roll" value="&{template:spell} {{title=@{spellname}}} {{subtitle=Time:@{spelltime}  Target:@{spelltarget}}} {{description=@{spelldescription}}} {{spellcrafteffect=@{spellspellcrafteffect}}} {{special=@{spellspecial}}}" name="roll_RepeatingSpells">
+                                    <button type="roll" value="&{template:spell} {{title=@{spellname}}} {{subtitle=Time:@{spelltime} Target:@{spelltarget}}} {{desc=@{spelldescription}}} {{effect=@{spellspellcrafteffect}}} {{special=@{spellspecial}}}" name="roll_RepeatingSpells">
                                         <span class="spell-title" name="attr_spellname"></span>
                                     </button>
                                     <div class="spell-subtitle-container">
@@ -1260,11 +1262,11 @@
                                 </div>
                                 <div class="toggle-swap-b spell-editing">
                                     <div class="spell-row-input">
-                                        <span>Name: </span>
+                                        <span>NAME: </span>
                                         <input type="text" name="attr_spellname" value="My New Spell"/>
                                     </div>
                                     <div class="spell-row-input">
-                                        <span>School: </span>
+                                        <span>SCHOOL: </span>
                                         <select name="attr_spellschool">
                                             <option value="spell" selected>Alteration</option>
                                             <option value="Talent">Divination</option>
@@ -1276,11 +1278,11 @@
                                         </select>
                                     </div>
                                     <div class="spell-row-input">
-                                        <span>Time: </span>
+                                        <span>TIME: </span>
                                         <input type="text" name="attr_spelltime" />
                                     </div>
                                     <div class="spell-row-input">
-                                        <span>Target: </span>
+                                        <span>TARGET: </span>
                                         <input type="text" name="attr_spelltarget" />
                                     </div>
                                     <div class="toggle-body">
@@ -1318,8 +1320,6 @@
 <input type="hidden" name="attr_charisma_mod" value="0" readonly="true">
 
 
-
-
 <!-- custom roll template -->
 <rolltemplate class="sheet-rolltemplate-simple">
     <div class="container">
@@ -1343,9 +1343,35 @@
             {{#subtitle}}<div class="subtitle">{{subtitle}}</div>{{/subtitle}}
         </div>
         <div class="content">
-            {{#description}}<div class="description">{{description}}</div>{{/description}}
-            {{#spellcrafteffect}}<div class="spellcrafteffect">{{spellcrafteffect}}</div>{{/spellcrafteffect}}
-            {{#special}}<div class="special">{{special}}</div>{{/special}}
+            {{#desc}}<div>
+                <div class="content-label">Description</div>
+                <div>{{desc}}</div>
+            </div>{{/desc}}
+            {{#effect}}<div>
+                <div class="content-label">Spellcraft Effect</div>
+                <div>{{effect}}</div>
+            </div>{{/effect}}
+            {{#special}}<div>
+                <div class="content-label">Special</div>
+                <div>{{special}}</div>
+            </div>
+            {{/special}}
+        </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-card">
+    <div class="container">
+        <div class="header">
+            {{#title}}<div class="title">{{title}}</div>{{/title}}
+            {{#subtitle}}<div class="subtitle">{{subtitle}}</div>{{/subtitle}}
+        </div>
+        <div class="content">
+            {{#first}}<div>{{first}}</div>{{/first}}
+            {{#second}}<div>{{second}}</div>{{/second}}
+            {{#third}}<div>{{third}}</div>{{/third}}
+            {{#fourth}}<div>{{fourth}}</div>{{/fourth}}
+            {{#fifth}}<div>{{fifth}}</div>{{/fifth}}
         </div>
     </div>
 </rolltemplate>

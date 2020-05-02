@@ -7,6 +7,14 @@
 
 /* General Universal stylings for sheet */
 
+label, input, button, select, textarea {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.2em;
+    padding: 1px;
+    margin: 1px;
+}
+
 textarea{
     box-sizing: border-box;
     height: 70px;
@@ -161,6 +169,8 @@ select {
     background-size: contain;
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -218,20 +228,12 @@ select {
 
 .sheet-field-underline input{
   display: block;
-  width:100%;
   padding: 0;
   margin-bottom: -5px;
-  border: solid 1px transparent;
-  background: transparent;
-  transition: 0.2s;
 }
 
 .sheet-field-underline .sheet-input-wrap:not(:last-child) input{
   padding-right:3px;
-}
-
-.sheet-field-underline input:hover{
-  border: solid 1px grey;
 }
 
 /* end field underlines */
@@ -254,7 +256,7 @@ select {
     justify-content: center;
     background-position: center;
     background-size: contain;
-    height: 90px;
+    height: 75px;
     background-repeat: no-repeat;
 }
 
@@ -280,7 +282,7 @@ select {
     padding: 0;
     width: 35px;
     height: 35px;
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: bold;
     text-align: center;
 }
@@ -300,8 +302,8 @@ select {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    min-width: 80px;
-    min-height: 80px;
+    min-width: 90px;
+    min-height: 90px;
     z-index: 1;
 }
 
@@ -316,8 +318,6 @@ select {
 .sheet-section-hp-mana .sheet-icon input{
     margin: 0 auto;
     padding: 0;
-    width: 35px;
-    height: 35px;
     font-size: 1.8em;
     font-weight: bold;
     text-align: center;
@@ -571,6 +571,7 @@ select {
     font-weight: bold;
     margin: 6px;
     padding: 0;
+    display: flex;
 }
 
 .sheet-thermo .sheet-thermo-node{
@@ -698,6 +699,16 @@ select {
     box-shadow: 0 0 0 2px black;
     outline: dashed 2px yellow;
     padding: 3px;
+}
+
+.sheet-section-spells .sheet-spell-row-input span{
+    font-size:0.8em;
+    font-weight: bold;
+}
+
+.sheet-section-spells .sheet-spell-row-input input{
+    border-bottom: solid 1px #8e8e8e;
+    line-height: 1.2em;
 }
 
 /* end spells section */
@@ -887,14 +898,11 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     border: 2px solid #B31515;
 }
 
-/* example colors */
 .sheet-rolltemplate-simple .sheet-container {
     /* this is the default color */
     background: white;
 }
 
-
-/* Allprops part */
 .sheet-rolltemplate-simple .sheet-content {
     background: #FFF;
 }
@@ -902,19 +910,6 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     padding: 5px;
 }
 
-/* Left column */
-.sheet-rolltemplate-simple .sheet-content .sheet-key {
-    font-weight: bold;
-    padding-right: 10px;
-    text-align: right;
-}
-
-/* Empty rule, use this if you want to change the right column 
-.sheet-rolltemplate-simple .sheet-value {
-}
-*/
-
-/* Make even-numbered rows grey */
 .sheet-rolltemplate-simple .sheet-content :nth-child(4n+3),
 .sheet-rolltemplate-simple .sheet-content :nth-child(4n) {
     background:#EEE;
@@ -930,10 +925,12 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
 /* spell custom roll template */
 
 .sheet-rolltemplate-spell .sheet-header {
-    background-color: var(--header-bg-color);
-    /* change text-align to center to center the header text */
-    text-align: left;
-    color: var(--header-text-color);
+    border-radius: 5px 5px 0 0;
+    overflow: hide;
+    overflow: hidden;
+    border: 1px solid black;
+    background: white;
+    padding: 4px;
 }
 
 .sheet-rolltemplate-spell .sheet-content + .sheet-header{
@@ -941,11 +938,10 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
 }
 
 .sheet-rolltemplate-spell .sheet-title {
-    font-size:1em;
-    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    line-height: 1.2em;
     font-weight: bold;
-    background: rgb(25,173,212);
-    background: linear-gradient(90deg, rgba(25,173,212,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .sheet-rolltemplate-spell .sheet-subtitle {
@@ -953,58 +949,79 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     text-align: left;
     font-style: italic;
     color: gray;
-    background: #e6e6e6;
 }
 
-.sheet-rolltemplate-spell .sheet-description,
-.sheet-rolltemplate-spell .sheet-spellcrafteffect,
-.sheet-rolltemplate-spell .sheet-special {
-    font-size:0.9em;
-}
-
-/* example colors */
 .sheet-rolltemplate-spell .sheet-container {
-    /* this is the default color */
-    background: white;
 }
 
 /* Allprops part */
 .sheet-rolltemplate-spell .sheet-content {
     background: #FFF;
+    border: solid 1px black;
+    border-radius: 0 0 5px 5px;
+    padding: 0 4px 4px 4px;
 }
 .sheet-rolltemplate-spell .sheet-content > div {
-    padding: 5px;
+    font-size:0.9em;
+    line-height: 1.2em;
+    padding-top: 4px;
 }
 
-/* Left column */
-.sheet-rolltemplate-spell .sheet-content .sheet-key {
+.sheet-rolltemplate-spell .sheet-content .sheet-content-label{
+    color: gray;
+    line-height: 1.2em;
+    font-size: 0.8em;
+}
+
+/* card custom roll template */
+.sheet-rolltemplate-card .sheet-header {
+    background-color: var(--header-bg-color);
+    /* change text-align to center to center the header text */
+    text-align: left;
+    color: var(--header-text-color);
+}
+
+.sheet-rolltemplate-card .sheet-content + .sheet-header{
+    border-bottom: solid 1px black;
+}
+
+.sheet-rolltemplate-card .sheet-title {
+    font-size:1em;
+    text-align: left;
     font-weight: bold;
-    padding-right: 10px;
-    text-align: right;
+    background: rgb(25,173,212);
+    background: linear-gradient(90deg, rgba(25,173,212,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.sheet-rolltemplate-card .sheet-subtitle {
+    font-size:0.8em;
+    text-align: left;
+    font-style: italic;
+    color: gray;
+    background: #e6e6e6;
+}
+
+/* example colors */
+.sheet-rolltemplate-card .sheet-container {
+    /* this is the default color */
+    background: white;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-card .sheet-content {
+    background: #FFF;
+}
+.sheet-rolltemplate-card .sheet-content > div {
+    padding: 5px;
+    font-size:0.9em;
 }
 
 /* Make even-numbered rows grey */
-.sheet-rolltemplate-spell .sheet-content :nth-child(even) {
+.sheet-rolltemplate-card .sheet-content :nth-child(even) {
     background:#EEE;
 }
 
-/* Description field */
-.sheet-rolltemplate-spell .sheet-desc {
-    grid-column: span 2;
-    padding: 5px;
-    text-align: center;
-}
 
 /* end custom roll template */
-
-
-title
-subtitle
-description
-spellcrafteffect
-special
-
-
-
 
 
