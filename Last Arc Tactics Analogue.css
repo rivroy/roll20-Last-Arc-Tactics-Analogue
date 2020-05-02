@@ -461,7 +461,7 @@ select {
 .sheet-section-inventory .repcontainer input{
   background: #e8e8e8;
   border: solid 1px transparent;
-  padding: 1px;
+  padding: 3px 3px;
   margin:0;
   font-size: 0.85em;
 }
@@ -954,13 +954,13 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
 .sheet-rolltemplate-spell .sheet-container {
 }
 
-/* Allprops part */
 .sheet-rolltemplate-spell .sheet-content {
     background: #FFF;
     border: solid 1px black;
     border-radius: 0 0 5px 5px;
     padding: 0 4px 4px 4px;
 }
+
 .sheet-rolltemplate-spell .sheet-content > div {
     font-size:0.9em;
     line-height: 1.2em;
@@ -1001,13 +1001,11 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     background: #e6e6e6;
 }
 
-/* example colors */
 .sheet-rolltemplate-card .sheet-container {
     /* this is the default color */
     background: white;
 }
 
-/* Allprops part */
 .sheet-rolltemplate-card .sheet-content {
     background: #FFF;
 }
