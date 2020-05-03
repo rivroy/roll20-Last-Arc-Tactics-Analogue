@@ -355,22 +355,26 @@ select {
 }
 
 .sheet-section-attacks .sheet-grid-one {
-  grid-area: 1 / 1 / 2 / 7;
+  grid-area: 1 / 1 / 2 / 6;
 }
 
 .sheet-section-attacks .sheet-grid-two {
-  grid-area: 1 / 7 / 2 / 9;
+  grid-area: 1 / 6 / 2 / 8;
 }
 
 .sheet-section-attacks .sheet-grid-three {
+    grid-area: 1 / 8 / 2 / 8;
+  }
+
+.sheet-section-attacks .sheet-grid-four {
   grid-area: 2 / 1 / 3 / 4;
 }
 
-.sheet-section-attacks .sheet-grid-four {
+.sheet-section-attacks .sheet-grid-five {
   grid-area: 2 / 4 / 3 / 6;
 }
 
-.sheet-section-attacks .sheet-grid-five {
+.sheet-section-attacks .sheet-grid-six {
   grid-area: 2 / 6 / 3 / 9; 
 }
 
@@ -402,6 +406,10 @@ select {
 
 .sheet-section-attacks input:hover {
   border: solid 1px grey;
+}
+
+.sheet-section-attacks button.attack-button{
+
 }
 
 /* end sheet-section-attacks */
@@ -628,7 +636,7 @@ select {
 }
 
 .sheet-section-feats .sheet-feat-subtitle-container{
-    line-height: 8px;
+    line-height: 1em;
     padding-bottom: 4px;
 }
 
@@ -824,7 +832,17 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
 
 /* end character pages */
 
+/* footer */
 
+.sheet-footer {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 9px;
+    line-height: 1em;
+}
+
+/* end footer */
 
 /* custom roll template */
 
@@ -933,10 +951,6 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     padding: 4px;
 }
 
-.sheet-rolltemplate-spell .sheet-content + .sheet-header{
-    border-bottom: solid 1px black;
-}
-
 .sheet-rolltemplate-spell .sheet-title {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.3em;
@@ -959,6 +973,8 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     border: solid 1px black;
     border-radius: 0 0 5px 5px;
     padding: 0 4px 4px 4px;
+    line-height: 1.2em;
+    font-size: 1em;
 }
 
 .sheet-rolltemplate-spell .sheet-content > div {
@@ -975,22 +991,19 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
 
 /* card custom roll template */
 .sheet-rolltemplate-card .sheet-header {
-    background-color: var(--header-bg-color);
-    /* change text-align to center to center the header text */
-    text-align: left;
-    color: var(--header-text-color);
-}
-
-.sheet-rolltemplate-card .sheet-content + .sheet-header{
-    border-bottom: solid 1px black;
+    border-radius: 5px 5px 0 0;
+    overflow: hide;
+    overflow: hidden;
+    border: 1px solid black;
+    background: white;
+    padding: 4px;
 }
 
 .sheet-rolltemplate-card .sheet-title {
-    font-size:1em;
-    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    line-height: 1.2em;
     font-weight: bold;
-    background: rgb(25,173,212);
-    background: linear-gradient(90deg, rgba(25,173,212,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .sheet-rolltemplate-card .sheet-subtitle {
@@ -998,7 +1011,6 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
     text-align: left;
     font-style: italic;
     color: gray;
-    background: #e6e6e6;
 }
 
 .sheet-rolltemplate-card .sheet-container {
@@ -1008,10 +1020,16 @@ input.sheet-toggle-hide:checked ~ .sheet-toggle-body {
 
 .sheet-rolltemplate-card .sheet-content {
     background: #FFF;
+    border: solid 1px black;
+    border-radius: 0 0 5px 5px;
+    padding: 0 4px 4px 4px;
+    line-height: 1.2em;
+    font-size: 1em;
 }
 .sheet-rolltemplate-card .sheet-content > div {
-    padding: 5px;
     font-size:0.9em;
+    line-height: 1.2em;
+    padding-top: 4px;
 }
 
 /* Make even-numbered rows grey */

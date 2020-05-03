@@ -850,14 +850,19 @@
                                 <input type="text" name="attr_attacktype" />
                             </div>
                             <div class="input-wrap grid-three">
+                                <button class="attack-button" type="roll" value="&{template:simple} {{title=@{featname}}} {{subtitle=Feat: @{feattype}}}" name="roll_RepeatingAttacks">
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="input-wrap grid-four">
                                 <label class="label">Range</label>
                                 <input type="text" name="attr_attackrange" />
                             </div>
-                            <div class="input-wrap grid-four">
+                            <div class="input-wrap grid-five">
                                 <label class="label">Attack Bonus</label>
                                 <input type="text" name="attr_attackbonus" />
                             </div>
-                            <div class="input-wrap grid-five">
+                            <div class="input-wrap grid-six">
                                 <label class="label">Damage</label>
                                 <input type="text" name="attr_attackdamage" />
                             </div>
@@ -1182,7 +1187,7 @@
                                     <label class="toggle-label-wrapper right-middle show-icon">
                                         <input type="checkbox" class="toggle-hide" name="attr_featdescriptionhide"/>
                                     </label>
-                                    <button type="roll" value="&{template:card} {{title=@{featname}}} {{first=@{featdescription}}}" name="roll_RepeatingFeats">
+                                    <button type="roll" value="&{template:card} {{title=@{featname}}} {{subtitle=Feat: @{feattype}}} {{first=@{featdescription}}}" name="roll_RepeatingFeats">
                                         <span class="feat-title" name="attr_featname"></span>
                                     </button>
                                     <div class="feat-subtitle-container">
@@ -1309,7 +1314,7 @@
     <span>Journal/Notes Stuff Goes here</span>
 </div><!-- end journal page -->
 
-<div class="tinytext">Portions of this sheet utilize images from the 'Last Arc: Tactics Analogue Character Sheet' under permission from the authors 'Old World Studios, Inc.'.</div>
+<div class="footer">Portions of this sheet utilize images from the 'Last Arc: Tactics Analogue Character Sheet' under permission from the authors 'Old World Studios, Inc.'.</div>
 
 
 <input type="hidden" name="attr_halflevel" value="0" readonly="true"> 
